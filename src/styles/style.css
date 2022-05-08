@@ -1,39 +1,35 @@
 body {
-  font-family: 'noto sans', sans-serif;
+  font-family: 'noto sans', sans-serif !important;
 }
 
 li {
-  margin-bottom: .5em;
+  margin-bottom: .5em !important;
 }
 
 ul > li {
-  list-style-type: disc;
+  list-style-type: disc !important;
 }
 
 ol > li {
-  list-style-type: decimal;
-}
-
-.h-0 {
-  height: 0;
+  list-style-type: decimal !important;
 }
 
 .list-style-none {
-  list-style-type: none;
+  list-style-type: none !important;
 }
 
 .cursor-default {
-  cursor: default;
+  cursor: default !important;
 }
 
 .cursor-pointer {
-  cursor: pointer;
+  cursor: pointer !important;
 }
 
 .bg-lightgray {
-  background-color: #F6F6F6; /* rgba(220, 220, 220, .25); */
+  background-color: #F6F6F6 !important; /* rgba(220, 220, 220, .25) */
 }
 
 .overflow-x-hidden {
-  overflow-x: hidden;
+  overflow-x: hidden !important;
 }
