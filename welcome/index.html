@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🤘 Create Petite App</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+    <!-- Styles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/2.7.0/hint.min.css" />
+    <link rel="stylesheet" href="/src/styles/style.css">
+  </head>
+  <body
+    class="opacity-0 min-vh-100 px-5 py-3 d-grid align-content-center cursor-default overflow-x-hidden"
+    :class="{ 'opacity-100': !isLoading }"
+    style="--animate-duration: 1.2s"
+    @contextmenu.prevent
+    @selectstart.prevent
+    @dragstart.prevent
+    @vue:mounted="init"
+  >
+    <header class="mt-3">
+      <h1 class="mb-3 fs-1 fw-bold">🤘 Create Petite App</h1>
+      <p class="mb-2">
+        <code class="p-1 text-dark rounded bg-lightgray">create-petite-app</code> is a front-end template includes libraries Bootstrap 5, Animate.css and Petite-Vue with CDN links.
+      </p>
+      <p>The use of CSS utility classes and reactivity model provides by petite-vue helps build projects really fast!</p>
+    </header>
+
+    <section class="my-2">
+      <h3 class="fw-bold">Usage</h3>
+      <ol>
+        <li>
+          <code
+            class="p-1 d-inline text-dark rounded bg-lightgray cursor-pointer hint--top hint--rounded hint--bounce"
+            aria-label="Click to copy"
+            @click="navigator.clipboard.writeText($el.textContent.replace('$ ', ''))"
+          >
+            $ cd desktop; npx degit rayc2045/create-petite-app new-project
+          </code>
+        </li>
+        <li>Open VS Code <a href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer" target="_blank">Live Server</a></li>
+        <li>Done! Start building your project</li>
+      </ol>
+    </section>
+
+    <section class="my-2">
+      <h3 class="fw-bold">Animate.css animations</h3>
+      <ul class="p-0">
+        <li
+          v-for="animation in animations" class="p-3 mb-4 rounded-3 list-style-none bg-lightgray">
+          <h3 class="mb-2 fs-5 fw-bold">{{ animation.title }}</h3>
+          <ul class="p-0 d-flex flex-wrap">
+            <li
+              v-for="anime in animation.items"
+              class="hint--top hint--rounded hint--bounce
+              mx-1 my-2 p-1 d-flex justify-content-center align-items-center flex-column bg-transparent border-0 cursor-pointer"
+              aria-label="Copy class name"
+              @mouseenter="toggleClasses($el.querySelector('.rounded-circle'), `animate__animated animate__${anime} animate__infinite`)"
+              @mouseleave="toggleClasses($el.querySelector('.rounded-circle'), `animate__animated animate__${anime} animate__infinite`)"
+              @click.prevent="copyAnimationClass(anime)"
+            >
+              <div
+                class="mb-2 rounded-circle"
+                :style="`
+                  width: 25px; height: 25px;
+                  background-color: ${animation.sectionBg};`"
+              ></div>
+              <span>{{ anime }}</span>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+
+    <section class="my-2">
+      <h3 class="fw-bold">Projects build with create-petite-app</h3>
+      <ul>
+        <li>css-utility-classes-search</li>
+      </ul>
+    </section>
+
+    <script src="https://unpkg.com/petite-vue"></script>
+    <script>
+      'use strict';
+      const { createApp, reactive } = PetiteVue;
+
+      const App = {
+        // Counter,
+        isPrefersReducedMotion: window.matchMedia('(prefers-reduced-motion: reduce)').matches,
+        isLoading: true,
+        animations: [],
+        async init() {
+          this.animations = await fetch('/src/data/animations.json').then(res =>
+            res.json()
+          );
+          this.isLoading = false;
+        },
+        toggleClasses(el, cls) {
+          cls.split(' ').map(cl => el.classList.toggle(cl));
+        },
+        copyAnimationClass(anime) {
+          navigator.clipboard.writeText(`animate__animated animate__${anime}`);
+        },
+      };
+
+      createApp(App).mount();
+    </script>
+  </body>
+</html>

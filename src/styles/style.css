@@ -1,0 +1,39 @@
+body {
+  font-family: 'noto sans', sans-serif;
+}
+
+li {
+  margin-bottom: .5em;
+}
+
+ul > li {
+  list-style-type: disc;
+}
+
+ol > li {
+  list-style-type: decimal;
+}
+
+.h-0 {
+  height: 0;
+}
+
+.list-style-none {
+  list-style-type: none;
+}
+
+.cursor-default {
+  cursor: default;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.bg-lightgray {
+  background-color: #F6F6F6; /* rgba(220, 220, 220, .25); */
+}
+
+.overflow-x-hidden {
+  overflow-x: hidden;
+}
