@@ -97,7 +97,7 @@
         isLoading: true,
         animations: [],
         async init() {
-          this.animations = await fetch('/src/data/animations.json').then(res =>
+          this.animations = await fetch('data/animations.json').then(res =>
             res.json()
           );
           this.isLoading = false;
