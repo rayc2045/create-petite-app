@@ -9,8 +9,7 @@ The use of CSS utility classes and reactivity model provides by Petite-Vue helps
 - [Noto Sans](https://fonts.google.com/noto/specimen/Noto+Sans) - the modern font suitable for most websites
 - [Bootstrap 5](https://getbootstrap.com/) - the CSS library helps build responsive mobile-first sites quickly
 - [Animate.css](https://animate.style/) - ready-to-use animation library, great for emphasis, home pages, sliders, and attention-guiding hints
-- [Petite-Vue](https://github.com/vuejs/petite-vue) - progressive
-JavaScript library driven by `@vue/reactivity` for building web user interfaces
+- [Petite-Vue](https://github.com/vuejs/petite-vue) - progressive JavaScript library driven by `@vue/reactivity` for building web user interfaces
 
 ## Quick start
 
@@ -23,11 +22,14 @@ JavaScript library driven by `@vue/reactivity` for building web user interfaces
 If you prefer to create a new project from the command line:
 
 ```
-$ cd desktop; npx degit rayc2045/create-petite-app new-petite-app
+cd desktop; npx degit rayc2045/create-petite-app new-petite-app
 ```
 
-Then, open it with VS Code [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) to preview the site on localhost, and use [Live Sass Compiler](https://marketplace.visualstudio.com/items?itemName=ritwickdey.live-sass) to compile Sass/Scss to CSS.
+## Usage
 
-### Projects build with create-petite-app
+- Use [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) to preview the project
+- Use [Live Sass Compiler](https://marketplace.visualstudio.com/items?itemName=ritwickdey.live-sass) to compile Sass/Scss to CSS
+
+## Projects build with create-petite-app
 
 - css-utility-classes-search
