@@ -25,7 +25,7 @@
       "backInRight",
       "backInUp"
     ],
-    "sectionBg": "darksalmon"
+    "sectionBg": "lightsalmon"
   },
   {
     "title": "Back exits",
@@ -35,7 +35,7 @@
       "backOutRight",
       "backOutUp"
     ],
-    "sectionBg": "darksalmon"
+    "sectionBg": "lightsalmon"
   },
   {
     "title": "Bouncing entrances",
@@ -76,7 +76,7 @@
       "fadeInBottomLeft",
       "fadeInBottomRight"
     ],
-    "sectionBg": "silver"
+    "sectionBg": "tan"
   },
   {
     "title": "Fading exits",
@@ -95,7 +95,7 @@
       "fadeOutBottomRight",
       "fadeOutBottomLeft"
     ],
-    "sectionBg": "silver"
+    "sectionBg": "tan"
   },
   {
     "title": "Flippers",
@@ -106,7 +106,7 @@
       "flipOutX",
       "flipOutY"
     ],
-    "sectionBg": "orange"
+    "sectionBg": "lightpink"
   },
   {
     "title": "Lightspeed",
@@ -116,7 +116,7 @@
       "lightSpeedOutRight",
       "lightSpeedOutLeft"
     ],
-    "sectionBg": "silver"
+    "sectionBg": "turquoise"
   },
   {
     "title": "Rotating entrances",
@@ -159,7 +159,7 @@
       "zoomInRight",
       "zoomInUp"
     ],
-    "sectionBg": "orchid"
+    "sectionBg": "plum"
   },
   {
     "title": "Zooming exits",
@@ -170,7 +170,7 @@
       "zoomOutRight",
       "zoomOutUp"
     ],
-    "sectionBg": "orchid"
+    "sectionBg": "plum"
   },
   {
     "title": "Sliding entrances",
