@@ -24,10 +24,13 @@
     @dragstart.prevent
     @vue:mounted="init"
   >
-    <h1 class="text-center">Hello! <span class="d-inline-block animate__animated animate__headShake animate__infinite">👋</span></h1>
+    <header class="text-center">
+      <h1>Hello! <span class="d-inline-block animate__animated animate__wobble animate__infinite">👋</span></h1>
+    </header>
 
     <div v-if="isLoading" class="loader"></div>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/petite-vue"></script>
     <script src="/src/scripts/script.js"></script>
   </body>
