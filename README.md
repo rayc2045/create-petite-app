@@ -4,7 +4,7 @@
 
 The use of CSS utility classes and reactivity model provides by Petite-Vue helps build projects very fast!
 
-### Pre-packed
+## Pre-packed
 
 - [Noto Sans](https://fonts.google.com/noto/specimen/Noto+Sans) - the modern font suitable for most websites
 - [Bootstrap 5](https://getbootstrap.com/) - the CSS library helps build responsive mobile-first sites quickly
@@ -12,9 +12,15 @@ The use of CSS utility classes and reactivity model provides by Petite-Vue helps
 - [Petite-Vue](https://github.com/vuejs/petite-vue) - progressive
 JavaScript library driven by `@vue/reactivity` for building web user interfaces
 
-### Quick start
+## Quick start
 
-Create new project:
+### Use this template
+
+[Create a new repo from this template on GitHub](https://github.com/rayc2045/create-petite-app/)
+
+### Clone to local
+
+If you prefer to create a new project from the command line:
 
 ```
 $ cd desktop; npx degit rayc2045/create-petite-app new-petite-app
