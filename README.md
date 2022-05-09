@@ -14,9 +14,13 @@ JavaScript library driven by `@vue/reactivity` for building web user interfaces 
 
 ### Quick start
 
-1. `$ cd desktop; npx degit rayc2045/create-petite-app new-petite-app`
-2. Open VS Code [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) to preview the site on localhost
-3. Start building your project
+Create new project:
+
+```bash
+$ cd desktop; npx degit rayc2045/create-petite-app new-petite-app
+```
+
+Then, open it with VS Code [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) to preview the site on localhost, and use [Live Sass Compiler](https://marketplace.visualstudio.com/items?itemName=ritwickdey.live-sass) to compile Sass/Scss to CSS.
 
 ### Projects build with create-petite-app
 
