@@ -1,6 +1,6 @@
 # 🤘 Create Petite App
 
-`create-petite-app` is a front-end template includes libraries Bootstrap 5, Animate.css and Petite-Vue.
+`create-petite-app` is a frontend-template includes libraries Bootstrap 5, Animate.css and Petite-Vue.
 
 The use of CSS utility classes and reactivity model provides by Petite-Vue helps build projects really fast!
 
@@ -16,7 +16,7 @@ JavaScript library driven by `@vue/reactivity` for building web user interfaces 
 
 Create new project:
 
-```bash
+```
 $ cd desktop; npx degit rayc2045/create-petite-app new-petite-app
 ```
 
