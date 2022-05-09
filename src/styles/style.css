@@ -1,35 +1,35 @@
 body {
-  font-family: 'noto sans', sans-serif !important;
+  font-family: 'noto sans', sans-serif;
 }
 
 li {
-  margin-bottom: .5em !important;
+  margin-bottom: .5em;
 }
 
 ul > li {
-  list-style-type: disc !important;
+  list-style-type: disc;
 }
 
 ol > li {
-  list-style-type: decimal !important;
+  list-style-type: decimal;
 }
 
 .list-style-none {
-  list-style-type: none !important;
+  list-style-type: none;
 }
 
 .cursor-default {
-  cursor: default !important;
+  cursor: default;
 }
 
 .cursor-pointer {
-  cursor: pointer !important;
+  cursor: pointer;
 }
 
 .bg-lightgray {
-  background-color: #F6F6F6 !important; /* rgba(220, 220, 220, .25) */
+  background-color: #F6F6F6; /* rgba(220, 220, 220, .25) */
 }
 
 .overflow-x-hidden {
-  overflow-x: hidden !important;
+  overflow-x: hidden;
 }
