@@ -2,15 +2,15 @@
 
 `create-petite-app` is a frontend-template includes libraries Bootstrap 5, Animate.css and Petite-Vue.
 
-The use of CSS utility classes and reactivity model provides by Petite-Vue helps build projects really fast!
+The use of CSS utility classes and reactivity model provides by Petite-Vue helps build projects very fast!
 
-### Features
+### Pre-packed
 
-- [Noto Sans](https://fonts.google.com/noto/specimen/Noto+Sans), a modern font suitable for most websites
-- [Bootstrap 5](https://getbootstrap.com/), a CSS library helps build responsive mobile-first sites quickly
-- [Animate.css](https://animate.style/), a ready-to-use animation library is great for emphasis, home pages, sliders, and attention-guiding hints
-- [Petite-Vue](https://github.com/vuejs/petite-vue), a progressive
-JavaScript library driven by `@vue/reactivity` for building web user interfaces (If you like React, you can replace it with [Preact](https://preactjs.com/)).
+- [Noto Sans](https://fonts.google.com/noto/specimen/Noto+Sans) - the modern font suitable for most websites
+- [Bootstrap 5](https://getbootstrap.com/) - the CSS library helps build responsive mobile-first sites quickly
+- [Animate.css](https://animate.style/) - ready-to-use animation library, great for emphasis, home pages, sliders, and attention-guiding hints
+- [Petite-Vue](https://github.com/vuejs/petite-vue) - progressive
+JavaScript library driven by `@vue/reactivity` for building web user interfaces
 
 ### Quick start
 
