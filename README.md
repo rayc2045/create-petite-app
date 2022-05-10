@@ -8,7 +8,7 @@ The use of CSS utility classes and reactivity model provides by Petite-Vue helps
 
 - Vue template syntax and reactivity model
 - CSS Utility classes
-- Dynamic import of JavaScript ES6 modules
+- Dynamic import of JavaScript ES6 [modules](https://github.com/mdn/js-examples/tree/master/modules)
 
 ## Pre-packed
 
