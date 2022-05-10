@@ -4,6 +4,12 @@
 
 The use of CSS utility classes and reactivity model provides by Petite-Vue helps build projects very fast!
 
+## Features
+
+- Vue template syntax and reactivity model
+- CSS Utility classes
+- Dynamic import of JavaScript ES6 modules
+
 ## Pre-packed
 
 - [Noto Sans](https://fonts.google.com/noto/specimen/Noto+Sans) - the modern font suitable for most websites
@@ -11,15 +17,11 @@ The use of CSS utility classes and reactivity model provides by Petite-Vue helps
 - [Animate.css](https://animate.style/) - ready-to-use animation library, great for emphasis, home pages, sliders, and attention-guiding hints
 - [Petite-Vue](https://github.com/vuejs/petite-vue) - progressive JavaScript library driven by `@vue/reactivity` for building web user interfaces
 
-## Quick start
+## Ways of quick start
 
-### Use this template
-
-[Create a new repo from this template on GitHub](https://github.com/rayc2045/create-petite-app/)
-
-### Clone to local
-
-If you prefer to create a new project from the command line:
+- [Create a new repo from this template on GitHub](https://github.com/rayc2045/create-petite-app/)
+- [Download this template to local](https://github.com/rayc2045/create-petite-app/archive/refs/heads/main.zip)
+- Create a new project from the command line:
 
 ```
 cd desktop; npx degit rayc2045/create-petite-app new-petite-app
@@ -29,6 +31,8 @@ cd desktop; npx degit rayc2045/create-petite-app new-petite-app
 
 - Use [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) to preview the project
 - Use [Live Sass Compiler](https://marketplace.visualstudio.com/items?itemName=ritwickdey.live-sass) to compile Sass/Scss to CSS
+- Use [MinifyAll](https://marketplace.visualstudio.com/items?itemName=josee9988.minifyall) to compress JavaScript code
+- Deploy production web applications on [Netlify](https://app.netlify.com/start)
 
 ## Projects build with create-petite-app
 
