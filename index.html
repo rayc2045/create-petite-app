@@ -4,7 +4,24 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Site build with create-petite-app</title>
+    <link rel="icon" href="https://avatars.githubusercontent.com/u/39514595?s=32">
+    <title>Home Page</title>
+    <meta name="title" content="Create Petite App">
+    <meta name="description" content="Frontend-template that helps quickly start projects from scratch">
+    <meta name="keywords" content="front-end responsive utility-classes grid-layout responsive-design vue-template frontend-template animate-css front-end-template vue3 bootstrap5 petite-vue">
+    <meta name="author" content="Ray Chang">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://create-petite-app.netlify.app/intro/">
+    <meta property="og:title" content="Create Petite App">
+    <meta property="og:description" content="Frontend-template that helps quickly start projects from scratch">
+    <meta property="og:image" content="">
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://create-petite-app.netlify.app/intro/">
+    <meta property="twitter:title" content="Create Petite App">
+    <meta property="twitter:description" content="Frontend-template that helps quickly start projects from scratch">
+    <meta property="twitter:image" content="">
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -16,7 +33,7 @@
     <link rel="stylesheet" href="/src/styles/style.css">
   </head>
   <body
-    class="opacity-0 min-vh-100 px-5 py-3 d-grid align-content-center cursor-default overflow-x-hidden"
+    class="opacity-0 min-vh-100 p-4 pb-0 px-md-5 py-md-3 d-grid align-content-center cursor-default bg-light overflow-x-hidden"
     :class="{ 'opacity-100': !isLoading }"
     style="--animate-duration: 1.2s"
     @contextmenu.prevent
@@ -24,14 +41,13 @@
     @dragstart.prevent
     @vue:mounted="init"
   >
-    <header class="text-center">
-      <h1>Hello! <span class="d-inline-block animate__animated animate__wobble animate__infinite">👋</span></h1>
-    </header>
+    <div class="text-center">
+      <h1>Hello, developer! <span class="d-inline-block animate__animated animate__wobble animate__infinite">👋</span></h1>
+      <h5 style="margin-left: -0.6em;">Learn usages from 
+        <a href="/intro">intro<span class="d-none d-sm-inline">duction</span><span class="d-none d-lg-inline"> page</span></a>
+      </h5>
+    </div>
 
-    <div v-if="isLoading" class="loader"></div>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
-    <script src="https://unpkg.com/petite-vue"></script>
-    <script src="/src/scripts/script.js"></script>
+    <script src="/src/scripts/script.js" type="module"></script>
   </body>
 </html>

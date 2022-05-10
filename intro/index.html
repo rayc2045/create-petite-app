@@ -6,31 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="https://avatars.githubusercontent.com/u/39514595?s=32">
     <title>Create Petite App</title>
-
     <meta name="title" content="Create Petite App">
     <meta name="description" content="Frontend-template that helps quickly start projects from scratch">
-    <meta name="keywords" content="">
+    <meta name="keywords" content="front-end responsive utility-classes grid-layout responsive-design vue-template frontend-template animate-css front-end-template vue3 bootstrap5 petite-vue">
     <meta name="author" content="Ray Chang">
-
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://create-petite-app.netlify.app/intro/">
     <meta property="og:title" content="Create Petite App">
     <meta property="og:description" content="Frontend-template that helps quickly start projects from scratch">
     <meta property="og:image" content="">
-
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://create-petite-app.netlify.app/intro/">
     <meta property="twitter:title" content="Create Petite App">
     <meta property="twitter:description" content="Frontend-template that helps quickly start projects from scratch">
     <meta property="twitter:image" content="">
-
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
-
     <!-- Styles -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" />
@@ -39,7 +34,7 @@
     <link rel="stylesheet" href="/src/styles/style.css">
   </head>
   <body
-    class="opacity-0 min-vh-100 px-5 py-3 d-grid align-content-center bg-light cursor-default overflow-x-hidden"
+    class="opacity-0 min-vh-100 p-4 pb-0 px-md-5 py-md-3 d-grid align-content-center bg-light cursor-default overflow-x-hidden"
     :class="{ 'opacity-100': !isLoading }"
     style="--animate-duration: 1.2s"
     @contextmenu.prevent
@@ -110,7 +105,7 @@
       <ul class="p-0">
         <li
           v-for="animation in animations" class="p-3 mb-4 rounded-3 list-style-none bg-lightgray-20">
-          <h2 class="mb-3 fs-5 fw-bold">{{ animation.title }}</h2>
+          <h2 class="mb-3 fs-5 fw-bold text-center text-sm-start">{{ animation.title }}</h2>
           <ul
             class="p-0 d-grid justify-content-evenly"
             style="grid-template-columns: repeat(auto-fill, 10em);"
@@ -128,23 +123,12 @@
                 class="mb-2 rounded"
                 :style="`
                   width: 2.5em; height: 2.5em;
-                  background-color: ${
-                    isPrefersReducedMotion
-                      ? 'lightgray'
-                      : animation.sectionBg
-                  };`"
+                  background-color: ${isPrefersReducedMotion ? 'lightgray' : animation.sectionBg};`"
               ></div>
               <span>{{ anime }}</span>
             </li>
           </ul>
         </li>
-      </ul>
-    </section>
-
-    <section>
-      <h2 class="fw-bold">Projects build with create-petite-app</h2>
-      <ul>
-        <li>css-utility-classes-search</li>
       </ul>
     </section>
 
