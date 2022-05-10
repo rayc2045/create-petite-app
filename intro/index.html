@@ -4,11 +4,33 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="https://avatars.githubusercontent.com/u/39514595?s=32">
     <title>Create Petite App</title>
+
+    <meta name="title" content="Create Petite App">
+    <meta name="description" content="Frontend-template that helps quickly start projects from scratch">
+    <meta name="keywords" content="">
+    <meta name="author" content="Ray Chang">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://create-petite-app.netlify.app/intro/">
+    <meta property="og:title" content="Create Petite App">
+    <meta property="og:description" content="Frontend-template that helps quickly start projects from scratch">
+    <meta property="og:image" content="">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://create-petite-app.netlify.app/intro/">
+    <meta property="twitter:title" content="Create Petite App">
+    <meta property="twitter:description" content="Frontend-template that helps quickly start projects from scratch">
+    <meta property="twitter:image" content="">
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+
     <!-- Styles -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" />
@@ -17,60 +39,100 @@
     <link rel="stylesheet" href="/src/styles/style.css">
   </head>
   <body
-    class="opacity-0 min-vh-100 px-5 py-3 d-grid align-content-center cursor-default overflow-x-hidden"
+    class="opacity-0 min-vh-100 px-5 py-3 d-grid align-content-center bg-light cursor-default overflow-x-hidden"
     :class="{ 'opacity-100': !isLoading }"
     style="--animate-duration: 1.2s"
     @contextmenu.prevent
     @selectstart.prevent
     @dragstart.prevent
     @vue:mounted="init"
-  >
-    <header class="mt-3">
-      <h1 class="mb-3 fs-1 fw-bold">🤘 Create Petite App</h1>
+  > 
+    <section>
+      <h1 class="mb-3 fw-bold">🤘 Create Petite App</h1>
       <p class="mb-2">
-        <code class="p-1 text-dark rounded bg-lightgray">create-petite-app</code> is a front-end template includes libraries Bootstrap 5, Animate.css and Petite-Vue with CDN links.
+        <code class="p-1 text-dark bg-lightgray-20 rounded">create-petite-app</code>  is a frontend-template includes libraries Bootstrap 5, Animate.css and Petite-Vue.
       </p>
-      <p>The use of CSS utility classes and reactivity model provides by petite-vue helps build projects really fast!</p>
-    </header>
-
-    <section class="my-2">
-      <h3 class="fw-bold">Usage</h3>
-      <ol>
-        <li>
-          <code
-            class="p-1 d-inline text-dark rounded bg-lightgray cursor-pointer hint--top hint--rounded hint--bounce"
-            aria-label="Click to copy"
-            @click="navigator.clipboard.writeText($el.textContent.replace('$ ', ''))"
-          >
-            $ cd desktop; npx degit rayc2045/create-petite-app new-project
-          </code>
-        </li>
-        <li>Open VS Code <a href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer" target="_blank">Live Server</a></li>
-        <li>Done! Start building your project</li>
-      </ol>
+      <p>The use of CSS utility classes and reactivity model provides by Petite-Vue helps build projects very fast!</p>
     </section>
 
-    <section class="my-2">
-      <h3 class="fw-bold">Animate.css animations</h3>
+    <section>
+      <h2 class="fw-bold">Features</h2>
+      <ul>
+        <li>Vue template syntax and reactivity model</li>
+        <li>CSS Utility classes</li>
+        <li>Dynamic import of JavaScript ES6 modules</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2 class="fw-bold">Pre-packed</h2>
+      <ul>
+        <li><a href="https://fonts.google.com/noto/specimen/Noto+Sans" target="_blank">Noto Sans</a> - the modern font suitable for most websites</li>
+        <li><a href="https://getbootstrap.com/" target="_blank">Bootstrap 5</a> - the CSS library helps build responsive mobile-first sites quickly</li>
+        <li><a href="https://animate.style/" target="_blank">Animate.css</a> - ready-to-use animation library, great for emphasis, home pages, sliders, and attention-guiding hints</li>
+        <li><a href="https://github.com/vuejs/petite-vue" target="_blank">Petite-Vue</a> - progressive JavaScript library driven by <code class="p-1 text-dark bg-lightgray-20 rounded">@vue/reactivity</code> for building web user interfaces</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2 class="fw-bold">Ways of quick start</h2>
+      <ul>
+        <li><a href="https://github.com/rayc2045/create-petite-app/">Create a new repo from this template on GitHub</a></li>
+        <li><a href="https://github.com/rayc2045/create-petite-app/archive/refs/heads/main.zip">Download this template to local</a></li>
+        <li>Create a new project from the command line:</li>
+      </ul>
+      <p
+        class="p-4 d-block rounded bg-lightgray-20 cursor-pointer hint--top hint--rounded hint--bounce"
+        aria-label="Copy to terminal"
+        @click="copyText($el.querySelector('code').textContent)"
+      >
+        <code class="text-dark">cd desktop; npx degit rayc2045/create-petite-app new-petite-app</code>
+      </p>
+    </section>
+
+    <section>
+      <h2 class="fw-bold">Usage</h2>
+      <ul>
+        <li>Use <a href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer" target="_blank">Live Server</a> to preview the project</li>
+        <li>Use <a href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.live-sass" target="_blank">Live Sass Compiler</a> to compile Sass/Scss to CSS</li>
+        <li>Use <a href="https://marketplace.visualstudio.com/items?itemName=josee9988.minifyall" target="_blank">MinifyAll</a> to compress JavaScript code</li>
+        <li>Deploy production web applications on <a href="https://app.netlify.com/start" target="_blank">Netlify</a></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2 class="mb-2 fw-bold">Animate.css animations</h2>
+      <p>
+        <span v-if="isPrefersReducedMotion">🙁 Oops! It seems that you </span>
+        <span v-if="!isPrefersReducedMotion">✏️ Note that users may </span>
+        have animations disabled on the OS, turning Animate.css off. Animate.css supports the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion" target="_blank">prefers-reduced-motion</a> CSS media feature. You can read more about it <a href="https://developers.google.com/web/updates/2019/03/prefers-reduced-motion" target="_blank">here</a>.
+      </p>
       <ul class="p-0">
         <li
-          v-for="animation in animations" class="p-3 mb-4 rounded-3 list-style-none bg-lightgray">
-          <h3 class="mb-2 fs-5 fw-bold">{{ animation.title }}</h3>
-          <ul class="p-0 d-flex flex-wrap">
+          v-for="animation in animations" class="p-3 mb-4 rounded-3 list-style-none bg-lightgray-20">
+          <h2 class="mb-3 fs-5 fw-bold">{{ animation.title }}</h2>
+          <ul
+            class="p-0 d-grid justify-content-evenly"
+            style="grid-template-columns: repeat(auto-fill, 10em);"
+          >
             <li
               v-for="anime in animation.items"
               class="hint--top hint--rounded hint--bounce
               mx-1 my-2 p-1 d-flex justify-content-center align-items-center flex-column bg-transparent border-0 cursor-pointer"
               aria-label="Copy class name"
-              @mouseenter="toggleClasses($el.querySelector('.rounded-circle'), `animate__animated animate__${anime} animate__infinite`)"
-              @mouseleave="toggleClasses($el.querySelector('.rounded-circle'), `animate__animated animate__${anime} animate__infinite`)"
-              @click.prevent="copyAnimationClass(anime)"
+              @mouseenter="toggleClasses($el.querySelector('.rounded'), `animate__animated animate__${anime} animate__infinite`)"
+              @mouseleave="toggleClasses($el.querySelector('.rounded'), `animate__animated animate__${anime} animate__infinite`)"
+              @click.prevent="copyText(`animate__animated animate__${anime}`)"
             >
               <div
-                class="mb-2 rounded-circle"
+                class="mb-2 rounded"
                 :style="`
-                  width: 25px; height: 25px;
-                  background-color: ${animation.sectionBg};`"
+                  width: 2.5em; height: 2.5em;
+                  background-color: ${
+                    isPrefersReducedMotion
+                      ? 'lightgray'
+                      : animation.sectionBg
+                  };`"
               ></div>
               <span>{{ anime }}</span>
             </li>
@@ -79,38 +141,13 @@
       </ul>
     </section>
 
-    <section class="my-2">
-      <h3 class="fw-bold">Projects build with create-petite-app</h3>
+    <section>
+      <h2 class="fw-bold">Projects build with create-petite-app</h2>
       <ul>
         <li>css-utility-classes-search</li>
       </ul>
     </section>
 
-    <script src="https://unpkg.com/petite-vue"></script>
-    <script>
-      'use strict';
-      const { createApp, reactive } = PetiteVue;
-
-      const App = {
-        // Counter,
-        isPrefersReducedMotion: window.matchMedia('(prefers-reduced-motion: reduce)').matches,
-        isLoading: true,
-        animations: [],
-        async init() {
-          this.animations = await fetch('data/animations.json').then(res =>
-            res.json()
-          );
-          this.isLoading = false;
-        },
-        toggleClasses(el, cls) {
-          cls.split(' ').map(cl => el.classList.toggle(cl));
-        },
-        copyAnimationClass(anime) {
-          navigator.clipboard.writeText(`animate__animated animate__${anime}`);
-        },
-      };
-
-      createApp(App).mount();
-    </script>
+    <script src="./src/script.js" type="module"></script>
   </body>
 </html>
