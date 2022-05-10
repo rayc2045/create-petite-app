@@ -33,7 +33,3 @@ cd desktop; npx degit rayc2045/create-petite-app new-petite-app
 - Use [Live Sass Compiler](https://marketplace.visualstudio.com/items?itemName=ritwickdey.live-sass) to compile Sass/Scss to CSS
 - Use [MinifyAll](https://marketplace.visualstudio.com/items?itemName=josee9988.minifyall) to compress JavaScript code
 - Deploy production web applications on [Netlify](https://app.netlify.com/start)
-
-## Projects build with create-petite-app
-
-- css-utility-classes-search
