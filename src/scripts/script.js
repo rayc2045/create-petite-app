@@ -1,7 +1,6 @@
 'use strict';
 
 import { createApp, reactive } from '/src/libraries/petite-vue.es.min.js';
-import { fetchData, copyText, toggleClasses } from '/src/scripts/utils/utils.js';
 
 (() => {
   const STORAGE_KEY = 'storage-key';
@@ -33,12 +32,9 @@ import { fetchData, copyText, toggleClasses } from '/src/scripts/utils/utils.js'
       '(prefers-reduced-motion: reduce)'
     ).matches,
     isLoading: true,
-    animations: [],
     async init() {
       this.isLoading = false;
     },
-    copyText,
-    toggleClasses,
   };
 
   createApp(App).mount();
