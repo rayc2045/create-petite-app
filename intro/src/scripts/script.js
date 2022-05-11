@@ -4,7 +4,6 @@ import { createApp } from '/src/libraries/petite-vue.es.min.js';
 import { fetchData, copyText, toggleClasses } from '/src/scripts/utils/utils.js';
 
 const App = {
-  ClassesSearch,
   isPrefersReducedMotion: window.matchMedia('(prefers-reduced-motion: reduce)')
     .matches,
   isLoading: true,
