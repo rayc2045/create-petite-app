@@ -80,7 +80,7 @@
         class="p-4 d-block rounded bg-lightgray-20 cursor-pointer hint--top hint--rounded"
         :class="[isPrefersReducedMotion ? 'hint--no-animate' : 'hint--bounce']"
         aria-label="Copy to terminal"
-        @mouseleave="$el.setAttribute('aria-label', 'Copy to terminal')"
+        @mouseleave="setTimeout(() => $el.setAttribute('aria-label', 'Copy to terminal'), 250)"
         @click="
           copyText($el.querySelector('code').textContent);
           $el.setAttribute('aria-label', 'Copied!');
@@ -123,7 +123,7 @@
               @mouseenter="toggleAnimation($el.querySelector('.rounded'), anime)"
               @mouseleave="
                 toggleAnimation($el.querySelector('.rounded'), anime);
-                $el.setAttribute('aria-label', 'Copy class name');
+                setTimeout(() => $el.setAttribute('aria-label', 'Copy class name', 250);
               "
               @click="
                 copyText(`animate__animated animate__${anime}`);
