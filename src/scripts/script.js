@@ -1,7 +1,7 @@
 'use strict';
 
-import { createApp, reactive } from 'https://cdnjs.cloudflare.com/ajax/libs/petite-vue/0.4.1/petite-vue.es.min.js';
-import { fetchData, copyText, toggleClasses } from '/src/scripts/utils.js';
+import { createApp, reactive } from '/src/libraries/petite-vue.es.min.js';
+import { fetchData, copyText, toggleClasses } from '/src/scripts/utils/utils.js';
 
 (() => {
   const STORAGE_KEY = 'storage-key';

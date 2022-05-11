@@ -1,18 +1,7 @@
 'use strict';
 
-import { createApp, reactive } from 'https://cdnjs.cloudflare.com/ajax/libs/petite-vue/0.4.1/petite-vue.es.min.js';
-import { fetchData, copyText, toggleClasses } from '/src/scripts/utils.js';
-
-const ClassesSearch = reactive({
-  classes: [],
-  currentSearch: '',
-  get searchResults() {
-
-  },
-  fetchBootstrapMinCss() {
-    this.classes = fetch('/src/styles/libraries/_bootstrap.scss')
-  }
-});
+import { createApp } from '/src/libraries/petite-vue.es.min.js';
+import { fetchData, copyText, toggleClasses } from '/src/scripts/utils/utils.js';
 
 const App = {
   ClassesSearch,
