@@ -80,7 +80,11 @@
         class="p-4 d-block rounded bg-lightgray-20 cursor-pointer hint--top hint--rounded"
         :class="[isPrefersReducedMotion ? 'hint--no-animate' : 'hint--bounce']"
         aria-label="Copy to terminal"
-        @click="copyText($el.querySelector('code').textContent)"
+        @mouseleave="$el.setAttribute('aria-label', 'Copy to terminal');"
+        @click="
+          copyText($el.querySelector('code').textContent);
+          $el.setAttribute('aria-label', 'Copied!');
+        "
       >
         <code class="text-dark">cd desktop; npx degit rayc2045/create-petite-app new-petite-app</code>
       </p>
@@ -117,8 +121,14 @@
               :class="[isPrefersReducedMotion ? 'hint--no-animate' : 'hint--bounce']"
               aria-label="Copy class name"
               @mouseenter="toggleClasses($el.querySelector('.rounded'), `animate__animated animate__${anime} animate__infinite`)"
-              @mouseleave="toggleClasses($el.querySelector('.rounded'), `animate__animated animate__${anime} animate__infinite`)"
-              @click.prevent="copyText(`animate__animated animate__${anime}`)"
+              @mouseleave="
+                toggleClasses($el.querySelector('.rounded'), `animate__animated animate__${anime} animate__infinite`);
+                $el.setAttribute('aria-label', 'Copy class name');
+              "
+              @click="
+                copyText(`animate__animated animate__${anime}`);
+                $el.setAttribute('aria-label', 'Copied!');
+              "
             >
               <div
                 class="mb-2 rounded"
