@@ -77,7 +77,8 @@
         <li>Create a new project from the command line:</li>
       </ul>
       <p
-        class="p-4 d-block rounded bg-lightgray-20 cursor-pointer hint--top hint--rounded hint--bounce"
+        class="p-4 d-block rounded bg-lightgray-20 cursor-pointer hint--top hint--rounded"
+        :class="[isPrefersReducedMotion ? 'hint--no-animate' : 'hint--bounce']"
         aria-label="Copy to terminal"
         @click="copyText($el.querySelector('code').textContent)"
       >
@@ -112,8 +113,8 @@
           >
             <li
               v-for="anime in animation.items"
-              class="hint--top hint--rounded hint--bounce
-              mx-1 my-2 p-1 d-flex justify-content-center align-items-center flex-column bg-transparent border-0 cursor-pointer"
+              class="mx-1 my-2 p-1 d-flex justify-content-center align-items-center flex-column bg-transparent border-0 cursor-pointer hint--top hint--rounded"
+              :class="[isPrefersReducedMotion ? 'hint--no-animate' : 'hint--bounce']"
               aria-label="Copy class name"
               @mouseenter="toggleClasses($el.querySelector('.rounded'), `animate__animated animate__${anime} animate__infinite`)"
               @mouseleave="toggleClasses($el.querySelector('.rounded'), `animate__animated animate__${anime} animate__infinite`)"
