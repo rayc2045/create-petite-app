@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="https://avatars.githubusercontent.com/u/39514595?s=32">
+    <link rel="icon" href="/assets/logo.svg">
     <title>Create Petite App</title>
     <meta name="title" content="Create Petite App">
     <meta name="description" content="Frontend-template that helps quickly start projects from scratch">
@@ -28,17 +28,23 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&display=swap" />
     <!-- Styles & Scripts -->
     <link rel="stylesheet" href="./src/styles/style.css">
+    <script src="/src/libraries/bootstrap.bundle.min.js" defer></script>
+    <script src="/src/libraries/lottie-player.min.js" defer></script>
     <script src="./src/scripts/script.js" type="module"></script>
   </head>
   <body
-    class="opacity-0 min-vh-100 p-4 pb-0 px-md-5 py-md-3 d-grid align-content-center bg-light cursor-default overflow-x-hidden"
+    class="opacity-0 min-vh-100 px-4 px-md-5 bg-light cursor-default overflow-x-hidden"
     :class="{ 'opacity-100': !isLoading }"
     style="--animate-duration: 1.2s"
     @contextmenu.prevent
     @selectstart.prevent
     @dragstart.prevent
     @vue:mounted="init"
-  > 
+  >
+    <section class="m-0 cover-animation">
+      <lottie-player src="/assets/lottieFiles_programming.json" background="transparent" speed="1" style="width: 100%;" loop autoplay></lottie-player>
+    </section>
+
     <section>
       <h1 class="mb-3 fw-bold">🤘 Create Petite App</h1>
       <p class="mb-2">
@@ -95,6 +101,51 @@
         <li>Use <a href="https://marketplace.visualstudio.com/items?itemName=josee9988.minifyall" target="_blank">MinifyAll</a> to compress JavaScript code</li>
         <li>Deploy production web applications on <a href="https://app.netlify.com/start" target="_blank">Netlify</a></li>
       </ul>
+    </section>
+
+    <section>
+      <h2 class="mb-2 fw-bold">Petite-Vue template syntax</h2>
+      <p>See more usages from petite-vue README.md on <a href="https://github.com/vuejs/petite-vue" target="_blank">GitHub</a>.</p>
+      <div
+        class="pt-4 d-block rounded bg-lightgray-20 cursor-pointer hint--top hint--rounded"
+        :class="[isPrefersReducedMotion ? 'hint--no-animate' : 'hint--bounce']"
+        aria-label="Copy to editor"
+        @mouseleave="setTimeout(() => $el.setAttribute('aria-label', 'Copy to editor'), 250)"
+        @click="
+          copyText(petiteVueExample);
+          $el.setAttribute('aria-label', 'Copied!');
+        "
+      ><pre v-pre>
+      <span class="pl-kos">&lt;</span><span style="color: forestgreen;">script</span> <span style="color: mediumblue;">type</span>="<span style="color: royalblue;">module</span>"<span class="pl-kos">&gt;</span>
+        <span style="color: crimson;">import</span> <span class="pl-kos">{</span> <span class="pl-s1">createApp</span> <span class="pl-kos">}</span> <span style="color: crimson;">from</span> <span style="color: royalblue;">'https://unpkg.com/petite-vue?module'</span>
+      
+        <span style="color: crimson;">function</span> <span style="color:tomato;">Counter</span><span class="pl-kos">(</span><span class="pl-s1">props</span><span class="pl-kos">)</span> <span class="pl-kos">{</span>
+          <span style="color: crimson;">return</span> <span class="pl-kos">{</span>
+            <span style="color: mediumblue;">count</span>: <span class="pl-s1">props</span><span class="pl-kos">.</span><span style="color: mediumblue;">initialCount</span><span class="pl-kos">,</span>
+            <span style="color: blueviolet;">inc</span><span class="pl-kos">(</span><span class="pl-kos">)</span> <span class="pl-kos">{</span>
+              <span class="pl-smi">this</span><span class="pl-kos">.</span><span style="color: mediumblue;">count</span><span style="color: mediumblue;">++</span>
+            <span class="pl-kos">}</span><span class="pl-kos">,</span>
+            <span style="color: blueviolet;">mounted</span><span class="pl-kos">(</span><span class="pl-kos">)</span> <span class="pl-kos">{</span>
+              <span class="pl-smi">console</span><span class="pl-kos">.</span><span style="color: blueviolet;">log</span><span class="pl-kos">(</span><span style="color: royalblue;">"I'm mounted!"</span><span class="pl-kos">)</span>
+            <span class="pl-kos">}</span>
+          <span class="pl-kos">}</span>
+        <span class="pl-kos">}</span>
+      
+        <span style="color: blueviolet;">createApp</span><span class="pl-kos">(</span><span class="pl-kos">{</span>
+          Counter
+        <span class="pl-kos">}</span><span class="pl-kos">)</span><span class="pl-kos">.</span><span style="color: blueviolet;">mount</span><span class="pl-kos">(</span><span class="pl-kos">)</span>
+      <span class="pl-kos">&lt;/</span><span style="color: forestgreen;">script</span><span class="pl-kos">&gt;</span>
+      
+      <span class="pl-kos">&lt;</span><span style="color: forestgreen;">div</span> <span style="color: mediumblue;">v-scope</span>="<span style="color: royalblue;">Counter({ initialCount: 1 })</span>" <span style="color: mediumblue;">@vue:mounted</span>="<span style="color: royalblue;">mounted</span>"<span class="pl-kos">&gt;</span>
+        <span class="pl-kos">&lt;</span><span style="color: forestgreen;">p</span><span class="pl-kos">&gt;</span>{{ count }}<span class="pl-kos">&lt;/</span><span style="color: forestgreen;">p</span><span class="pl-kos">&gt;</span>
+        <span class="pl-kos">&lt;</span><span style="color: forestgreen;">button</span> <span style="color: mediumblue;">@click</span>="<span style="color: royalblue;">inc</span>"<span class="pl-kos">&gt;</span>increment<span class="pl-kos">&lt;/</span><span style="color: forestgreen;">button</span><span class="pl-kos">&gt;</span>
+      <span class="pl-kos">&lt;/</span><span style="color: forestgreen;">div</span><span class="pl-kos">&gt;</span>
+      
+      <span class="pl-kos">&lt;</span><span style="color: forestgreen;">div</span> <span style="color: mediumblue;">v-scope</span>="<span style="color: royalblue;">Counter({ initialCount: 2 })</span>"<span class="pl-kos">&gt;</span>
+        <span class="pl-kos">&lt;</span><span style="color: forestgreen;">p</span><span class="pl-kos">&gt;</span>{{ count }}<span class="pl-kos">&lt;/</span><span style="color: forestgreen;">p</span><span class="pl-kos">&gt;</span>
+        <span class="pl-kos">&lt;</span><span style="color: forestgreen;">button</span> <span style="color: mediumblue;">@click</span>="<span style="color: royalblue;">inc</span>"<span class="pl-kos">&gt;</span>increment<span class="pl-kos">&lt;/</span><span style="color: forestgreen;">button</span><span class="pl-kos">&gt;</span>
+      <span class="pl-kos">&lt;/</span><span style="color: forestgreen;">div</span><span class="pl-kos">&gt;</span>
+      </pre></div>
     </section>
 
     <section>
