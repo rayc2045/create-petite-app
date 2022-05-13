@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="/assets/logo.svg">
+    <link rel="icon" href="/assets/images/logo.svg">
     <title>Create Petite App</title>
     <meta name="title" content="Create Petite App">
     <meta name="description" content="Frontend-template that helps quickly start projects from scratch">
@@ -42,7 +42,7 @@
     @vue:mounted="init"
   >
     <section class="m-0 cover-animation overflow-hidden">
-      <lottie-player class="animate__animated animate__fadeInUp" style="--animate-duration: 1.8s" src="/assets/lottieFiles_programming.json" background="transparent" speed="1" style="width: 100%;" loop autoplay></lottie-player>
+      <lottie-player class="animate__animated animate__fadeInUp" style="--animate-duration: 1.8s" src="/assets/lottieFiles/lottieFiles_programming.json" background="transparent" speed="1" style="width: 100%;" loop autoplay></lottie-player>
     </section>
 
     <section>
@@ -56,34 +56,34 @@
     <section>
       <h2 class="fw-bold">Features</h2>
       <ul>
-        <li>Vue template syntax and reactivity model</li>
-        <li>Ready-to-use CSS Utility classes and animations</li>
-        <li>Dynamic import of JavaScript ES6 <a href="https://github.com/mdn/js-examples/tree/master/modules" target="_blank">modules</a></li>
+        <li class="list-style-disc">Vue template syntax and reactivity model</li>
+        <li class="list-style-disc">Ready-to-use CSS Utility classes and animations</li>
+        <li class="list-style-disc">Dynamic import of JavaScript ES6 <a href="https://github.com/mdn/js-examples/tree/master/modules" target="_blank">modules</a></li>
       </ul>
     </section>
 
     <section>
       <h2 class="fw-bold">Pre-packed</h2>
       <ul>
-        <li><a href="https://fonts.google.com/noto/specimen/Noto+Sans" target="_blank">Noto Sans</a> - the modern font suitable for most websites</li>
-        <li><a href="https://getbootstrap.com/" target="_blank">Bootstrap 5</a> - the CSS library helps build responsive mobile-first sites quickly</li>
-        <li><a href="https://animate.style/" target="_blank">Animate.css</a> - ready-to-use animation library, great for emphasis, home pages, sliders, and attention-guiding hints</li>
-        <li><a href="https://github.com/vuejs/petite-vue" target="_blank">Petite-Vue</a> - progressive JavaScript library driven by <code class="p-1 text-dark bg-lightgray-20 rounded">@vue/reactivity</code> for building web user interfaces</li>
+        <li class="list-style-disc"><a href="https://fonts.google.com/noto/specimen/Noto+Sans" target="_blank">Noto Sans</a> - the modern font suitable for most websites</li>
+        <li class="list-style-disc"><a href="https://getbootstrap.com/" target="_blank">Bootstrap 5</a> - the CSS library helps build responsive mobile-first sites quickly</li>
+        <li class="list-style-disc"><a href="https://animate.style/" target="_blank">Animate.css</a> - ready-to-use animation library, great for emphasis, home pages, sliders, and attention-guiding hints</li>
+        <li class="list-style-disc"><a href="https://github.com/vuejs/petite-vue" target="_blank">Petite-Vue</a> - progressive JavaScript library driven by <code class="p-1 text-dark bg-lightgray-20 rounded">@vue/reactivity</code> for building web user interfaces</li>
       </ul>
     </section>
 
     <section>
       <h2 class="fw-bold">Ways of quick start</h2>
       <ul>
-        <li><a href="https://github.com/rayc2045/create-petite-app/generate" target="_blank">Create a new repo from this template on GitHub</a></li>
-        <li><a href="https://github.com/rayc2045/create-petite-app/archive/refs/heads/main.zip" target="_blank">Download this template to local</a></li>
-        <li>Create a new project from the command line:</li>
+        <li class="list-style-disc"><a href="https://github.com/rayc2045/create-petite-app/generate" target="_blank">Create a new repo from this template on GitHub</a></li>
+        <li class="list-style-disc"><a href="https://github.com/rayc2045/create-petite-app/archive/refs/heads/main.zip" target="_blank">Download this template to local</a></li>
+        <li class="list-style-disc">Create a new project from the command line:</li>
       </ul>
       <p
         class="p-4 d-block rounded bg-lightgray-20 cursor-pointer hint--top hint--rounded"
         :class="[isPrefersReducedMotion ? 'hint--no-animate' : 'hint--bounce']"
-        aria-label="Copy to terminal"
-        @mouseleave="setTimeout(() => $el.setAttribute('aria-label', 'Copy to terminal'), 250)"
+        aria-label="Copy to clipboard"
+        @mouseleave="setTimeout(() => $el.setAttribute('aria-label', 'Copy to clipboard'), 250)"
         @click="
           copyText($el.querySelector('code').textContent);
           $el.setAttribute('aria-label', 'Copied!');
@@ -96,10 +96,10 @@
     <section>
       <h2 class="fw-bold">Usage</h2>
       <ul>
-        <li>Use <a href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer" target="_blank">Live Server</a> to preview the project</li>
-        <li>Use <a href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.live-sass" target="_blank">Live Sass Compiler</a> to compile Sass/Scss to CSS</li>
-        <li>Use <a href="https://marketplace.visualstudio.com/items?itemName=josee9988.minifyall" target="_blank">MinifyAll</a> to compress JavaScript code</li>
-        <li>Deploy production web applications on <a href="https://app.netlify.com/start" target="_blank">Netlify</a></li>
+        <li class="list-style-disc">Use <a href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer" target="_blank">Live Server</a> to preview the project</li>
+        <li class="list-style-disc">Use <a href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.live-sass" target="_blank">Live Sass Compiler</a> to compile Sass/Scss to CSS</li>
+        <li class="list-style-disc">Use <a href="https://marketplace.visualstudio.com/items?itemName=josee9988.minifyall" target="_blank">MinifyAll</a> to compress JavaScript code</li>
+        <li class="list-style-disc">Deploy production web applications on <a href="https://app.netlify.com/start" target="_blank">Netlify</a></li>
       </ul>
     </section>
 
@@ -109,8 +109,8 @@
       <div
         class="pt-4 d-block rounded bg-lightgray-20 cursor-pointer hint--top hint--rounded"
         :class="[isPrefersReducedMotion ? 'hint--no-animate' : 'hint--bounce']"
-        aria-label="Copy to editor"
-        @mouseleave="setTimeout(() => $el.setAttribute('aria-label', 'Copy to editor'), 250)"
+        aria-label="Copy to clipboard"
+        @mouseleave="setTimeout(() => $el.setAttribute('aria-label', 'Copy to clipboard'), 250)"
         @click="
           copyText(petiteVueExample);
           $el.setAttribute('aria-label', 'Copied!');
@@ -146,6 +146,73 @@
         <span class="pl-kos">&lt;</span><span style="color: forestgreen;">button</span> <span style="color: mediumblue;">@click</span>="<span style="color: royalblue;">inc</span>"<span class="pl-kos">&gt;</span>increment<span class="pl-kos">&lt;/</span><span style="color: forestgreen;">button</span><span class="pl-kos">&gt;</span>
       <span class="pl-kos">&lt;/</span><span style="color: forestgreen;">div</span><span class="pl-kos">&gt;</span>
       </pre></div>
+    </section>
+
+    <section>
+      <h2 class="mb-2 fw-bold">Bootstrap 5 examples</h2>
+      <p>See more examples ranging from using parts of the framework to custom components and layouts <a href="https://getbootstrap.com/docs/5.1/examples/" target="_blank">here</a>.</p>
+      <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-3">
+        <div class="col">
+          <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style="background-image: url('/assets/images/unsplash-photo-1.jpeg');">
+            <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+              <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Short title, long jacket</h2>
+              <ul class="d-flex list-unstyled mt-auto">
+                <li class="me-auto">
+                  <img src="/assets/images/twbs.png" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
+                </li>
+                <li class="d-flex align-items-center me-3">
+                  <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"></use></svg>
+                  <small>Earth</small>
+                </li>
+                <li class="d-flex align-items-center">
+                  <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"></use></svg>
+                  <small>3d</small>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style="background-image: url('/assets/images/unsplash-photo-2.jpeg');">
+            <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+              <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Much longer title that wraps to multiple lines</h2>
+              <ul class="d-flex list-unstyled mt-auto">
+                <li class="me-auto">
+                  <img src="/assets/images/twbs.png" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
+                </li>
+                <li class="d-flex align-items-center me-3">
+                  <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"></use></svg>
+                  <small>Pakistan</small>
+                </li>
+                <li class="d-flex align-items-center">
+                  <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"></use></svg>
+                  <small>4d</small>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style="background-image: url('/assets/images/unsplash-photo-3.jpeg');">
+            <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
+              <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Another longer title belongs here</h2>
+              <ul class="d-flex list-unstyled mt-auto">
+                <li class="me-auto">
+                  <img src="/assets/images/twbs.png" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
+                </li>
+                <li class="d-flex align-items-center me-3">
+                  <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"></use></svg>
+                  <small>California</small>
+                </li>
+                <li class="d-flex align-items-center">
+                  <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"></use></svg>
+                  <small>5d</small>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section>
