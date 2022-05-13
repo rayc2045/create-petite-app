@@ -1,3 +1,5 @@
+![Programming](https://raw.githubusercontent.com/rayc2045/create-petite-app/main/assets/images/programming.svg | width=270)
+
 # 🤘 Create Petite App
 
 `create-petite-app` is a frontend-template includes libraries Bootstrap 5, Animate.css and Petite-Vue.
