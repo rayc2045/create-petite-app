@@ -1,4 +1,4 @@
-![Programming](https://raw.githubusercontent.com/rayc2045/create-petite-app/main/assets/images/programming.svg | width=270)
+<img src="https://raw.githubusercontent.com/rayc2045/create-petite-app/main/assets/images/programming.svg" width="270" />
 
 # 🤘 Create Petite App
 
