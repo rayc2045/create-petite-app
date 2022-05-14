@@ -15,9 +15,9 @@ The use of CSS utility classes and reactivity model provides by Petite-Vue helps
 ## Pre-packed
 
 - [Noto Sans](https://fonts.google.com/noto/specimen/Noto+Sans) - the modern font suitable for most websites
-- [Bootstrap 5](https://getbootstrap.com/) - the CSS library helps build responsive mobile-first sites quickly
-- [Animate.css](https://animate.style/) - ready-to-use animation library, great for emphasis, home pages, sliders, and attention-guiding hints
-- [Petite-Vue](https://github.com/vuejs/petite-vue) - progressive JavaScript library driven by `@vue/reactivity` for building web user interfaces
+- [Bootstrap](https://getbootstrap.com/) (v5.1.3) - the CSS library helps build responsive mobile-first sites quickly
+- [Animate.css](https://animate.style/) (v4.1.1) - ready-to-use animation library, great for emphasis, home pages, sliders, and attention-guiding hints
+- [Petite-Vue](https://github.com/vuejs/petite-vue) (v0.4.1) - progressive JavaScript library driven by `@vue/reactivity` for building web user interfaces
 
 ## Ways of quick start
 
