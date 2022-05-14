@@ -33,7 +33,7 @@
     <script src="./src/scripts/script.js" type="module"></script>
   </head>
   <body
-    class="opacity-0 min-vh-100 px-4 px-md-5 bg-light cursor-default overflow-x-hidden"
+    class="opacity-0 min-vh-100 px-2 px-sm-0 bg-light cursor-default overflow-x-hidden"
     :class="{ 'opacity-100': !isLoading }"
     style="--animate-duration: 1.2s"
     @contextmenu.prevent
@@ -41,11 +41,10 @@
     @dragstart.prevent
     @vue:mounted="init"
   >
-    <section class="m-0 cover-animation overflow-hidden">
-      <lottie-player class="animate__animated animate__fadeInUp" style="--animate-duration: 1.8s" src="/assets/lottieFiles/lottieFiles_programming.json" background="transparent" speed="1" style="width: 100%;" loop autoplay></lottie-player>
-    </section>
-
-    <section>
+    <section class="container">
+      <div class="mb-2 cover-animation overflow-hidden">
+        <lottie-player class="animate__animated animate__fadeInUp" style="--animate-duration: 1.8s" src="/assets/lottieFiles/lottieFiles_programming.json" background="transparent" speed="1" style="width: 100%;" loop autoplay></lottie-player>
+      </div>
       <h1 class="mb-3 fw-bold">🤘 Create Petite App</h1>
       <p class="mb-2">
         <code class="p-1 text-dark bg-lightgray-20 rounded">create-petite-app</code>  is a frontend-template includes libraries Bootstrap 5, Animate.css and Petite-Vue.
@@ -53,7 +52,7 @@
       <p>The use of CSS utility classes and reactivity model provides by Petite-Vue helps build projects very fast!</p>
     </section>
 
-    <section>
+    <section class="container">
       <h2 class="fw-bold">Features</h2>
       <ul>
         <li class="list-style-disc">Vue template syntax and reactivity model</li>
@@ -62,7 +61,7 @@
       </ul>
     </section>
 
-    <section>
+    <section class="container">
       <h2 class="fw-bold">Pre-packed</h2>
       <ul>
         <li class="list-style-disc"><a href="https://fonts.google.com/noto/specimen/Noto+Sans" target="_blank">Noto Sans</a> - the modern font suitable for most websites</li>
@@ -72,7 +71,7 @@
       </ul>
     </section>
 
-    <section>
+    <section class="container">
       <h2 class="fw-bold">Ways of quick start</h2>
       <ul>
         <li class="list-style-disc"><a href="https://github.com/rayc2045/create-petite-app/generate" target="_blank">Create a new repo from this template on GitHub</a></li>
@@ -93,7 +92,7 @@
       </p>
     </section>
 
-    <section>
+    <section class="container">
       <h2 class="fw-bold">Usage</h2>
       <ul>
         <li class="list-style-disc">Use <a href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer" target="_blank">Live Server</a> to preview the project</li>
@@ -103,7 +102,7 @@
       </ul>
     </section>
 
-    <section>
+    <section class="container">
       <h2 class="mb-2 fw-bold">Petite-Vue template syntax</h2>
       <p>See more usages from petite-vue README.md on <a href="https://github.com/vuejs/petite-vue" target="_blank">GitHub</a>.</p>
       <div
@@ -148,7 +147,7 @@
       </pre></div>
     </section>
 
-    <section>
+    <section class="container">
       <h2 class="mb-2 fw-bold">Bootstrap 5 examples</h2>
       <p>See more examples ranging from using parts of the framework to custom components and layouts <a href="https://getbootstrap.com/docs/5.1/examples/" target="_blank">here</a>.</p>
       <div
@@ -225,7 +224,7 @@
       </div>
     </section>
 
-    <section>
+    <section class="container">
       <h2 class="mb-2 fw-bold">Animate.css animations</h2>
       <p>
         <span v-if="isPrefersReducedMotion">🙁 Oops! It seems that you </span>
@@ -234,7 +233,7 @@
       </p>
       <ul class="p-0">
         <li
-          v-for="animation in animations" class="p-3 mb-4 rounded-3 list-style-none bg-lightgray-20">
+          v-for="animation in animations" class="p-3 mb-0 mb-sm-4 rounded-3 list-style-none bg-lightgray-20">
           <h2 class="mb-3 fs-5 fw-bold text-center text-sm-start">{{ animation.title }}</h2>
           <ul
             class="p-0 d-grid justify-content-evenly"
