@@ -23,7 +23,7 @@ The use of CSS utility classes and reactivity model provides by Petite-Vue helps
 
 - [Create a new repo from this template on GitHub](https://github.com/rayc2045/create-petite-app/)
 - [Download this template to local](https://github.com/rayc2045/create-petite-app/archive/refs/heads/main.zip)
-- Create a new project from the command line:
+- Create a new project from the command line (npm v5.2):
 
 ```
 cd desktop; npx degit rayc2045/create-petite-app new-petite-app
