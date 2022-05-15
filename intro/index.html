@@ -148,8 +148,92 @@
     </section>
 
     <section class="container">
-      <h2 class="mb-2 fw-bold">Bootstrap 5 examples</h2>
-      <p>See more examples ranging from using parts of the framework to custom components and layouts <a href="https://getbootstrap.com/docs/5.1/examples/" target="_blank">here</a>.</p>
+      <h2 class="mb-2 fw-bold">Bootstrap examples</h2>
+      <p>See more examples ranging from using parts of the framework to custom components and layouts <a href="https://getbootstrap.com/docs/5.1/components/accordion/" target="_blank">here</a>.</p>
+      <!-- btn inbox -->
+      <div
+        class="d-inline-block hint--top hint--rounded"
+        :class="[isPrefersReducedMotion ? 'hint--no-animate' : 'hint--bounce']"
+        aria-label="Copy to clipboard"
+        @mouseleave="setTimeout(() => $el.setAttribute('aria-label', 'Copy to clipboard'), 250)"
+        @click="
+          copyText($el.innerHTML);
+          $el.setAttribute('aria-label', 'Copied!');
+        "
+      >
+        <button
+          type="button"
+          class="ms-0 m-2 btn btn-primary position-relative"
+        >
+          Inbox
+          <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+            99+
+            <span class="visually-hidden">unread messages</span>
+          </span>
+        </button>
+      </div>
+      <!-- colorful btn -->
+      <div
+        v-for="item in ['Secondary', 'Success', 'Danger',
+        'Warning', 'Info', 'Light', 'Dark', 'Link']"
+        class="m-2 d-inline-block"
+      >
+        <div
+          class="hint--top hint--rounded"
+          :class="[isPrefersReducedMotion ? 'hint--no-animate' : 'hint--bounce']"
+          aria-label="Copy to clipboard"
+          @mouseleave="setTimeout(() => $el.setAttribute('aria-label', 'Copy to clipboard'), 250)"
+          @click="
+            copyText($el.innerHTML);
+            $el.setAttribute('aria-label', 'Copied!');
+          "
+        >
+          <button type="button" class="btn" :class="`btn-${item.toLowerCase()}`"
+          >{{ item }}</button>
+        </div>
+      </div>
+      <!-- Large btn -->
+      <div
+        class="m-2 d-inline-block hint--top hint--rounded"
+        :class="[isPrefersReducedMotion ? 'hint--no-animate' : 'hint--bounce']"
+        aria-label="Copy to clipboard"
+        @mouseleave="setTimeout(() => $el.setAttribute('aria-label', 'Copy to clipboard'), 250)"
+        @click="
+          copyText($el.innerHTML);
+          $el.setAttribute('aria-label', 'Copied!');
+        "
+      >
+        <button type="button" class="btn btn-primary btn-lg">Large button</button>
+      </div>
+      <!-- Modal -->
+      <div class="example-modal m-2 d-inline-block">
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          Launch demo modal
+        </button>
+
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, delectus! Ratione aliquam eum officia at.
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  data-bs-dismiss="modal"
+                  @click="copyText($el.closest('.example-modal').innerHTML)"
+                >Copy to clipboard</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div
         class="cursor-pointer hint--top hint--rounded"
         :class="[isPrefersReducedMotion ? 'hint--no-animate' : 'hint--bounce']"
