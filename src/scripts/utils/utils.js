@@ -25,7 +25,7 @@ export function getRandomNum(min, max) {
 }
 
 export function copyText(text) {
-  navigator.clipboard.writeText(text);
+  navigator.clipboard.writeText(text.trim());
 }
 
 export function getRepeatedItem(arr) {
