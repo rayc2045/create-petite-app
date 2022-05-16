@@ -150,6 +150,68 @@
     <section class="container">
       <h2 class="mb-2 fw-bold">Bootstrap examples</h2>
       <p>See more examples ranging from using parts of the framework to custom components and layouts <a href="https://getbootstrap.com/docs/5.1/components/accordion/" target="_blank">here</a>.</p>
+      <!-- Row -->
+      <div
+        class="d-block cursor-pointer hint--top hint--rounded"
+        :class="[isPrefersReducedMotion ? 'hint--no-animate' : 'hint--bounce']"
+        aria-label="Copy to clipboard"
+        @mouseleave="setTimeout(() => $el.setAttribute('aria-label', 'Copy to clipboard'), 250)"
+        @click="
+          copyText($el.innerHTML);
+          $el.setAttribute('aria-label', 'Copied!');
+        "
+      >
+        <div class="row mb-3">
+          <div
+            class="p-3 col-sm-6 col-lg-8"
+            style="
+              background-color: #E6E2EB;
+              border: 1px solid rgba(86, 61, 124, .2);
+            "
+          >.col-sm-6 .col-lg-8</div>
+          <div
+            class="p-3 col-6 col-lg-4"
+            style="
+              background-color: #E6E2EB;
+              border: 1px solid rgba(86, 61, 124, .2);
+            "
+          >.col-6 .col-lg-4</div>
+        </div>
+      </div>
+      <div
+        class="d-block cursor-pointer hint--top hint--rounded"
+        :class="[isPrefersReducedMotion ? 'hint--no-animate' : 'hint--bounce']"
+        aria-label="Copy to clipboard"
+        @mouseleave="setTimeout(() => $el.setAttribute('aria-label', 'Copy to clipboard'), 250)"
+        @click="
+          copyText($el.innerHTML);
+          $el.setAttribute('aria-label', 'Copied!');
+        "
+      >
+        <div class="row mb-3">
+          <div
+            class="p-3 col-6 col-sm-4"
+            style="
+              background-color: #E6E2EB;
+              border: 1px solid rgba(86, 61, 124, .2);
+            "
+          >.col-6 .col-sm-4</div>
+          <div
+            class="p-3 col-6 col-sm-4"
+            style="
+              background-color: #E6E2EB;
+              border: 1px solid rgba(86, 61, 124, .2);
+            "
+          >.col-6 .col-sm-4</div>
+          <div
+            class="p-3 col-6 col-sm-4"
+            style="
+              background-color: #E6E2EB;
+              border: 1px solid rgba(86, 61, 124, .2);
+            "
+          >.col-6 .col-sm-4</div>
+        </div>
+      </div>
       <!-- btn inbox -->
       <div
         class="d-inline-block hint--top hint--rounded"
@@ -172,7 +234,7 @@
           </span>
         </button>
       </div>
-      <!-- colorful btn -->
+      <!-- Colorful btn -->
       <div
         v-for="item in ['Secondary', 'Success', 'Danger',
         'Warning', 'Info', 'Light', 'Dark', 'Link']"
@@ -234,6 +296,7 @@
           </div>
         </div>
       </div>
+      <!-- Card -->
       <div
         class="cursor-pointer hint--top hint--rounded"
         :class="[isPrefersReducedMotion ? 'hint--no-animate' : 'hint--bounce']"
