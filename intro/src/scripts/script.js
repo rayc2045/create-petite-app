@@ -46,6 +46,9 @@ const App = {
     this.isLoading = false;
   },
   copyText,
+  removeStyleAttr(str) {
+    return str.replace(/style="[^"]*"/g, '').replace(/" >/g, '">');
+  },
   toggleAnimation(el, animation) {
     toggleClasses(el, `animate__animated animate__${animation} animate__infinite`);
   },

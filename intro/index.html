@@ -157,7 +157,7 @@
         aria-label="Copy to clipboard"
         @mouseleave="setTimeout(() => $el.setAttribute('aria-label', 'Copy to clipboard'), 250)"
         @click="
-          copyText($el.innerHTML);
+          copyText(removeStyleAttr($el.innerHTML));
           $el.setAttribute('aria-label', 'Copied!');
         "
       >
@@ -184,7 +184,7 @@
         aria-label="Copy to clipboard"
         @mouseleave="setTimeout(() => $el.setAttribute('aria-label', 'Copy to clipboard'), 250)"
         @click="
-          copyText($el.innerHTML);
+          copyText(removeStyleAttr($el.innerHTML));
           $el.setAttribute('aria-label', 'Copied!');
         "
       >
