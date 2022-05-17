@@ -25,10 +25,10 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
     <!-- Styles & Scripts -->
     <link rel="stylesheet" href="./src/styles/style.css">
-    <script src="/src/libraries/bootstrap.bundle.min.js" defer></script>
+    <script src="/src/libraries/mdb.min.js" defer></script>
     <script src="/src/libraries/lottie-player.min.js" defer></script>
     <script src="./src/scripts/script.js" type="module"></script>
   </head>
@@ -64,8 +64,9 @@
     <section class="container">
       <h2 class="fw-bold">Pre-packed</h2>
       <ul>
-        <li><a href="https://fonts.google.com/noto/specimen/Noto+Sans" target="_blank">Noto Sans</a> - the modern font suitable for most websites</li>
-        <li><a href="https://getbootstrap.com/" target="_blank">Bootstrap</a> (v5.1.3) - the CSS library helps build responsive mobile-first sites quickly</li>
+        <li><a href="https://fonts.google.com/noto/specimen/Noto+Sans" target="_blank">Roboto Font</a> - Material design font suitable for most websites</li>
+        <li><a href="https://mdbootstrap.com/" target="_blank">MDBootstrap</a> (v4.0.0) - Material design for Bootstrap v5, helps build responsive mobile-first sites quickly</li>
+        <li><a href="https://fontawesome.com/" target="_blank">Font Awesome</a> (v6.1.1) - the icon library and toolkit used by millions of designers and developers</li>
         <li><a href="https://animate.style/" target="_blank">Animate.css</a> (v4.1.1) - ready-to-use animation library, great for emphasis, home pages, sliders, and attention-guiding hints</li>
         <li><a href="https://github.com/vuejs/petite-vue" target="_blank">Petite-Vue</a> (v0.4.1) - progressive JavaScript library driven by <code class="p-1 text-dark bg-lightgray-20 rounded">@vue/reactivity</code> for building web user interfaces</li>
       </ul>
@@ -148,7 +149,7 @@
     </section>
 
     <section class="container">
-      <h2 class="mb-2 fw-bold">Bootstrap examples</h2>
+      <h2 class="mb-2 fw-bold">MDBootstrap examples</h2>
       <p>See more examples ranging from using parts of the framework to custom components and layouts <a href="https://getbootstrap.com/docs/5.1/components/accordion/" target="_blank">here</a>.</p>
       <!-- Row -->
       <div
@@ -296,78 +297,67 @@
           </div>
         </div>
       </div>
-      <!-- Card -->
+      <!-- Forms -->
       <div
-        class="cursor-pointer hint--top hint--rounded"
+        class="my-4 container w-50 d-flex hint--top hint--rounded"
         :class="[isPrefersReducedMotion ? 'hint--no-animate' : 'hint--bounce']"
         aria-label="Copy to clipboard"
         @mouseleave="setTimeout(() => $el.setAttribute('aria-label', 'Copy to clipboard'), 250)"
         @click="
           copyText($el.innerHTML);
           $el.setAttribute('aria-label', 'Copied!');
-      ">
-        <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-3">
-          <div class="col">
-            <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style="background-image: url('/assets/images/unsplash-photo-1.jpeg');">
-              <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-                <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Short title, long jacket</h2>
-                <ul class="d-flex list-unstyled mt-auto">
-                  <li class="me-auto">
-                    <img src="/assets/images/twbs.png" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
-                  </li>
-                  <li class="d-flex align-items-center me-3">
-                    <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"></use></svg>
-                    <small>Earth</small>
-                  </li>
-                  <li class="d-flex align-items-center">
-                    <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"></use></svg>
-                    <small>3d</small>
-                  </li>
-                </ul>
-              </div>
-            </div>
+        "
+      >
+        <form>
+          <div class="form-floating mb-3">
+            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+            <label for="floatingInput">Email address</label>
           </div>
-          <div class="col">
-            <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style="background-image: url('/assets/images/unsplash-photo-2.jpeg');">
-              <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-                <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Much longer title that wraps to multiple lines</h2>
-                <ul class="d-flex list-unstyled mt-auto">
-                  <li class="me-auto">
-                    <img src="/assets/images/twbs.png" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
-                  </li>
-                  <li class="d-flex align-items-center me-3">
-                    <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"></use></svg>
-                    <small>Pakistan</small>
-                  </li>
-                  <li class="d-flex align-items-center">
-                    <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"></use></svg>
-                    <small>4d</small>
-                  </li>
-                </ul>
-              </div>
-            </div>
+          <div class="form-floating mb-3">
+            <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+            <label for="floatingPassword">Password</label>
           </div>
-          <div class="col">
-            <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style="background-image: url('/assets/images/unsplash-photo-3.jpeg');">
-              <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
-                <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Another longer title belongs here</h2>
-                <ul class="d-flex list-unstyled mt-auto">
-                  <li class="me-auto">
-                    <img src="/assets/images/twbs.png" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
-                  </li>
-                  <li class="d-flex align-items-center me-3">
-                    <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"></use></svg>
-                    <small>California</small>
-                  </li>
-                  <li class="d-flex align-items-center">
-                    <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"></use></svg>
-                    <small>5d</small>
-                  </li>
-                </ul>
-              </div>
-            </div>
+        
+          <div class="form-check mb-3">
+            <input type="checkbox" class="form-check-input" id="validationFormCheck1" required>
+            <label class="form-check-label" for="validationFormCheck1">Check this checkbox</label>
+            <div class="invalid-feedback">Example invalid feedback text</div>
           </div>
-        </div>
+        
+          <div class="form-check">
+            <input type="radio" class="form-check-input" id="validationFormCheck2" name="radio-stacked" required>
+            <label class="form-check-label" for="validationFormCheck2">Toggle this radio</label>
+          </div>
+          <div class="form-check mb-3">
+            <input type="radio" class="form-check-input" id="validationFormCheck3" name="radio-stacked" required>
+            <label class="form-check-label" for="validationFormCheck3">Or toggle this other radio</label>
+            <div class="invalid-feedback">More example invalid feedback text</div>
+          </div>
+        
+          <div class="mb-3">
+            <select class="form-select" required aria-label="select example">
+              <option selected>Open this select menu</option>
+              <option v-for="(item, idx) in ['One', 'Two', 'Three']" value="idx">
+                {{ item }}
+              </option>
+            </select>
+            <div class="invalid-feedback">Example invalid select feedback</div>
+          </div>
+        
+          <div class="mb-3">
+            <input type="file" class="form-control" aria-label="file upload" required>
+            <div class="invalid-feedback">Example invalid form file feedback</div>
+          </div>
+
+          <div class="mb-3 form-check form-switch">
+            <input class="form-check-input" type="checkbox" id="switchCheckDefault">
+            <label class="form-check-label" for="switchCheckDefault">Switch checkbox input</label>
+          </div>
+        
+          <div class="mb-3">
+            <button class="btn btn-primary" type="submit">Submit form</button>
+          </div>
+        </form>
       </div>
     </section>
 
