@@ -58,5 +58,6 @@ import { createApp, reactive } from '/src/libraries/petite-vue.es.min.js';
   };
 
   createApp(App).mount();
+  window.onresize = () => (ContextMenu.isShow = false);
   window.onscroll = () => (ContextMenu.isShow = false);
 })(window, document);

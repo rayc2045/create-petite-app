@@ -91,4 +91,5 @@ const App = {
 };
 
 createApp(App).mount();
+window.onresize = () => (ContextMenu.isShow = false);
 window.onscroll = () => (ContextMenu.isShow = false);
