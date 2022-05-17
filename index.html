@@ -36,7 +36,8 @@
     class="opacity-0 min-vh-100 px-2 px-sm-0 d-grid align-content-center cursor-default bg-light overflow-x-hidden"
     :class="{ 'opacity-100': !isLoading }"
     style="--animate-duration: 1.2s"
-    @contextmenu.prevent
+    @click="ContextMenu.isShow = false"
+    @contextmenu.prevent="ContextMenu.showMenu($event)"
     @selectstart.prevent
     @dragstart.prevent
     @vue:mounted="init"
@@ -47,5 +48,20 @@
         Learn usages from <a href="/intro">intro<span class="d-none d-sm-inline">duction</span></a>
       </h5>
     </div>
+
+    <ul
+      v-if="ContextMenu.lists.length"
+      id="context-menu"
+      class="position-fixed dropdown-menu overflow-hidden"
+      :class="{'show': ContextMenu.isShow}"
+    >
+      <li v-for="list in ContextMenu.lists" class="m-0 list-style-none">
+        <a
+          class="dropdown-item"
+          :href="list.link"
+          @click="ContextMenu.isShow = false"
+        >{{ list.content }}</a>
+      </li>
+    </ul>
   </body>
 </html>
