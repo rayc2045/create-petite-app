@@ -27,6 +27,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
     <!-- Styles & Scripts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link rel="stylesheet" href="./src/styles/style.css">
     <script src="/src/libraries/mdb.min.js" defer></script>
     <script src="/src/libraries/lottie-player.min.js" defer></script>
@@ -41,13 +42,13 @@
     @dragstart.prevent
     @vue:mounted="init"
   >
-    <section class="container">
+    <section class="mb-4 container">
       <div class="mb-2 cover-animation overflow-hidden">
         <lottie-player class="animate__animated animate__fadeInUp" style="--animate-duration: 1.8s" src="/assets/lottieFiles/lottieFiles_programming.json" background="transparent" speed="1" style="width: 100%;" loop autoplay></lottie-player>
       </div>
       <h1 class="mb-3 fw-bold">🤘 Create Petite App</h1>
       <p class="mb-2">
-        <code class="p-1 text-dark bg-lightgray-20 rounded">create-petite-app</code>  is a frontend-template includes libraries Bootstrap 5, Animate.css and Petite-Vue.
+        <code class="p-1 text-dark bg-lightgray-20 rounded">create-petite-app</code> is a frontend-template includes libraries MDBootstrap, Animate.css and Petite-Vue.
       </p>
       <p>The use of CSS utility classes and reactivity model provides by Petite-Vue helps build projects very fast!</p>
     </section>
@@ -150,214 +151,184 @@
 
     <section class="container">
       <h2 class="mb-2 fw-bold">MDBootstrap examples</h2>
-      <p>See more examples ranging from using parts of the framework to custom components and layouts <a href="https://getbootstrap.com/docs/5.1/components/accordion/" target="_blank">here</a>.</p>
-      <!-- Row -->
-      <div
-        class="d-block cursor-pointer hint--top hint--rounded"
-        :class="[isPrefersReducedMotion ? 'hint--no-animate' : 'hint--bounce']"
-        aria-label="Copy to clipboard"
-        @mouseleave="setTimeout(() => $el.setAttribute('aria-label', 'Copy to clipboard'), 250)"
-        @click="
-          copyText(removeStyleAttr($el.innerHTML));
-          $el.setAttribute('aria-label', 'Copied!');
-        "
-      >
-        <div class="row mb-3">
-          <div
-            class="p-3 col-sm-6 col-lg-8"
-            style="
-              background-color: #E6E2EB;
-              border: 1px solid rgba(86, 61, 124, .2);
-            "
-          >.col-sm-6 .col-lg-8</div>
-          <div
-            class="p-3 col-6 col-lg-4"
-            style="
-              background-color: #E6E2EB;
-              border: 1px solid rgba(86, 61, 124, .2);
-            "
-          >.col-6 .col-lg-4</div>
-        </div>
-      </div>
-      <div
-        class="d-block cursor-pointer hint--top hint--rounded"
-        :class="[isPrefersReducedMotion ? 'hint--no-animate' : 'hint--bounce']"
-        aria-label="Copy to clipboard"
-        @mouseleave="setTimeout(() => $el.setAttribute('aria-label', 'Copy to clipboard'), 250)"
-        @click="
-          copyText(removeStyleAttr($el.innerHTML));
-          $el.setAttribute('aria-label', 'Copied!');
-        "
-      >
-        <div class="row mb-3">
-          <div
-            class="p-3 col-6 col-sm-4"
-            style="
-              background-color: #E6E2EB;
-              border: 1px solid rgba(86, 61, 124, .2);
-            "
-          >.col-6 .col-sm-4</div>
-          <div
-            class="p-3 col-6 col-sm-4"
-            style="
-              background-color: #E6E2EB;
-              border: 1px solid rgba(86, 61, 124, .2);
-            "
-          >.col-6 .col-sm-4</div>
-          <div
-            class="p-3 col-6 col-sm-4"
-            style="
-              background-color: #E6E2EB;
-              border: 1px solid rgba(86, 61, 124, .2);
-            "
-          >.col-6 .col-sm-4</div>
-        </div>
-      </div>
-      <!-- btn inbox -->
-      <div
-        class="d-inline-block hint--top hint--rounded"
-        :class="[isPrefersReducedMotion ? 'hint--no-animate' : 'hint--bounce']"
-        aria-label="Copy to clipboard"
-        @mouseleave="setTimeout(() => $el.setAttribute('aria-label', 'Copy to clipboard'), 250)"
-        @click="
-          copyText($el.innerHTML);
-          $el.setAttribute('aria-label', 'Copied!');
-        "
-      >
-        <button
-          type="button"
-          class="ms-0 m-2 btn btn-primary position-relative"
-        >
-          Inbox
-          <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-            99+
-            <span class="visually-hidden">unread messages</span>
-          </span>
-        </button>
-      </div>
-      <!-- Colorful btn -->
-      <div
-        v-for="item in ['Secondary', 'Success', 'Danger',
-        'Warning', 'Info', 'Light', 'Dark', 'Link']"
-        class="m-2 d-inline-block"
-      >
+      <p>See more examples ranging from using parts of the framework to custom components and layouts <a href="https://mdbootstrap.com/docs/standard/" target="_blank">here</a>.</p>
+      <!-- Grid -->
+      <div class="row mb-3">
         <div
-          class="hint--top hint--rounded"
-          :class="[isPrefersReducedMotion ? 'hint--no-animate' : 'hint--bounce']"
-          aria-label="Copy to clipboard"
-          @mouseleave="setTimeout(() => $el.setAttribute('aria-label', 'Copy to clipboard'), 250)"
-          @click="
-            copyText($el.innerHTML);
-            $el.setAttribute('aria-label', 'Copied!');
+          class="p-3 col-sm-6 col-lg-8"
+          style="
+            background-color: #E6E2EB;
+            border: 1px solid rgba(86, 61, 124, .2);
           "
-        >
-          <button type="button" class="btn" :class="`btn-${item.toLowerCase()}`"
-          >{{ item }}</button>
-        </div>
+        >.col-sm-6 .col-lg-8</div>
+        <div
+          class="p-3 col-6 col-lg-4"
+          style="
+            background-color: #E6E2EB;
+            border: 1px solid rgba(86, 61, 124, .2);
+          "
+        >.col-6 .col-lg-4</div>
       </div>
-      <!-- Large btn -->
-      <div
-        class="m-2 d-inline-block hint--top hint--rounded"
-        :class="[isPrefersReducedMotion ? 'hint--no-animate' : 'hint--bounce']"
-        aria-label="Copy to clipboard"
-        @mouseleave="setTimeout(() => $el.setAttribute('aria-label', 'Copy to clipboard'), 250)"
-        @click="
-          copyText($el.innerHTML);
-          $el.setAttribute('aria-label', 'Copied!');
-        "
-      >
-        <button type="button" class="btn btn-primary btn-lg">Large button</button>
+      <div class="row mb-3">
+        <div
+          class="p-3 col-6 col-sm-4"
+          style="
+            background-color: #E6E2EB;
+            border: 1px solid rgba(86, 61, 124, .2);
+          "
+        >.col-6 .col-sm-4</div>
+        <div
+          class="p-3 col-6 col-sm-4"
+          style="
+            background-color: #E6E2EB;
+            border: 1px solid rgba(86, 61, 124, .2);
+          "
+        >.col-6 .col-sm-4</div>
+        <div
+          class="p-3 col-6 col-sm-4"
+          style="
+            background-color: #E6E2EB;
+            border: 1px solid rgba(86, 61, 124, .2);
+          "
+        >.col-6 .col-sm-4</div>
       </div>
-      <!-- Modal -->
-      <div class="example-modal m-2 d-inline-block">
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-          Launch demo modal
-        </button>
+      <!-- Buttons -->
+      <div class="my-4">
+        <button type="button" class="btn btn-primary">Primary</button>
+        <button type="button" class="btn btn-secondary">Secondary</button>
+        <button type="button" class="btn btn-success">Success</button>
+        <button type="button" class="btn btn-danger">Danger</button>
+        <button type="button" class="btn btn-warning">Warning</button>
+        <button type="button" class="btn btn-info">Info</button>
+        <button type="button" class="btn btn-light" data-mdb-ripple-color="dark">Light</button>
+        <button type="button" class="btn btn-dark">Dark</button>
+        <button type="button" class="btn btn-link" data-mdb-ripple-color="dark">Link</button>
+      </div>
+      <!-- Form -->
+      <div class="row">
+        <div class="col-md-8 mb-4">
+          <section class="shadow-5 p-4 bg-white">
+            <form>
+              <div class="row mb-4">
+                <div class="col">
+                  <div class="form-outline">
+                    <input type="text" id="form6Example1" class="form-control" style="
+                        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABHklEQVQ4EaVTO26DQBD1ohQWaS2lg9JybZ+AK7hNwx2oIoVf4UPQ0Lj1FdKktevIpel8AKNUkDcWMxpgSaIEaTVv3sx7uztiTdu2s/98DywOw3Dued4Who/M2aIx5lZV1aEsy0+qiwHELyi+Ytl0PQ69SxAxkWIA4RMRTdNsKE59juMcuZd6xIAFeZ6fGCdJ8kY4y7KAuTRNGd7jyEBXsdOPE3a0QGPsniOnnYMO67LgSQN9T41F2QGrQRRFCwyzoIF2qyBuKKbcOgPXdVeY9rMWgNsjf9ccYesJhk3f5dYT1HX9gR0LLQR30TnjkUEcx2uIuS4RnI+aj6sJR0AM8AaumPaM/rRehyWhXqbFAA9kh3/8/NvHxAYGAsZ/il8IalkCLBfNVAAAAABJRU5ErkJggg==');
+                        background-repeat: no-repeat;
+                        background-attachment: scroll;
+                        background-size: 16px 18px;
+                        background-position: 98% 50%;
+                      ">
+                    <label class="form-label" for="form6Example1" style="margin-left: 0px">First name</label>
+                    <div class="form-notch">
+                      <div class="form-notch-leading" style="width: 9px"></div>
+                      <div class="form-notch-middle" style="width: 68.8px"></div>
+                      <div class="form-notch-trailing"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="form-outline">
+                    <input type="text" id="form6Example2" class="form-control">
+                    <label class="form-label" for="form6Example2" style="margin-left: 0px">Last name</label>
+                    <div class="form-notch">
+                      <div class="form-notch-leading" style="width: 9px"></div>
+                      <div class="form-notch-middle" style="width: 68px"></div>
+                      <div class="form-notch-trailing"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              <div class="form-outline mb-4">
+                <input type="text" id="form6Example3" class="form-control">
+                <label class="form-label" for="form6Example3" style="margin-left: 0px">Company name</label>
+                <div class="form-notch">
+                  <div class="form-notch-leading" style="width: 9px"></div>
+                  <div class="form-notch-middle" style="width: 98.4px"></div>
+                  <div class="form-notch-trailing"></div>
+                </div>
               </div>
-              <div class="modal-body">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, delectus! Ratione aliquam eum officia at.
+
+              <div class="form-outline mb-4">
+                <input type="text" id="form6Example4" class="form-control">
+                <label class="form-label" for="form6Example4" style="margin-left: 0px">Address</label>
+                <div class="form-notch">
+                  <div class="form-notch-leading" style="width: 9px"></div>
+                  <div class="form-notch-middle" style="width: 55.2px"></div>
+                  <div class="form-notch-trailing"></div>
+                </div>
               </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button
-                  type="button"
-                  class="btn btn-primary"
-                  data-bs-dismiss="modal"
-                  @click="copyText($el.closest('.example-modal').innerHTML)"
-                >Copy to clipboard</button>
+
+              <div class="form-outline mb-4">
+                <input type="email" id="form6Example5" class="form-control">
+                <label class="form-label" for="form6Example5" style="margin-left: 0px">Email</label>
+                <div class="form-notch">
+                  <div class="form-notch-leading" style="width: 9px"></div>
+                  <div class="form-notch-middle" style="width: 40px"></div>
+                  <div class="form-notch-trailing"></div>
+                </div>
+              </div>
+
+              <div class="form-outline mb-4">
+                <input type="number" id="form6Example6" class="form-control">
+                <label class="form-label" for="form6Example6" style="margin-left: 0px">Phone</label>
+                <div class="form-notch">
+                  <div class="form-notch-leading" style="width: 9px"></div>
+                  <div class="form-notch-middle" style="width: 44.8px"></div>
+                  <div class="form-notch-trailing"></div>
+                </div>
+              </div>
+
+              <div class="form-outline mb-4">
+                <textarea class="form-control" id="form6Example7" rows="4"></textarea>
+                <label class="form-label" for="form6Example7" style="margin-left: 0px">Additional information</label>
+                <div class="form-notch">
+                  <div class="form-notch-leading" style="width: 9px"></div>
+                  <div class="form-notch-middle" style="width: 135.2px;"></div>
+                  <div class="form-notch-trailing"></div>
+                </div>
+              </div>
+
+              <div class="form-check d-flex justify-content-center mb-4">
+                <input class="form-check-input me-2" type="checkbox" value="" id="form6Example8" checked="">
+                <label class="form-check-label" for="form6Example8">
+                  Create an account?
+                </label>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-block mb-4" @click.prevent>
+                Place order
+              </button>
+            </form>
+          </section>
+        </div>
+        <div class="col-md-4 mb-4">
+          <section>
+            <button type="button" class="btn btn-success btn-block mb-4">
+              Place order
+            </button>
+
+            <div class="card">
+              <div class="card-header text-center py-3">
+                <h5 class="mb-0 fw-bold">Summary</h5>
+              </div>
+
+              <div class="card-body">
+                <ul>
+                  <li><strong>Product 1: </strong>$100</li>
+                  <li><strong>Product 2: </strong>$50</li>
+                  <li><strong>Product 2: </strong>$49</li>
+                </ul>
+              </div>
+
+              <div class="card-footer d-flex justify-content-between py-3">
+                <strong>Total amount:</strong>
+                <strong>$199</strong>
               </div>
             </div>
-          </div>
+          </section>
         </div>
-      </div>
-      <!-- Forms -->
-      <div
-        class="my-4 container w-50 d-flex hint--top hint--rounded"
-        :class="[isPrefersReducedMotion ? 'hint--no-animate' : 'hint--bounce']"
-        aria-label="Copy to clipboard"
-        @mouseleave="setTimeout(() => $el.setAttribute('aria-label', 'Copy to clipboard'), 250)"
-        @click="
-          copyText($el.innerHTML);
-          $el.setAttribute('aria-label', 'Copied!');
-        "
-      >
-        <form>
-          <div class="form-floating mb-3">
-            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-            <label for="floatingInput">Email address</label>
-          </div>
-          <div class="form-floating mb-3">
-            <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-            <label for="floatingPassword">Password</label>
-          </div>
-        
-          <div class="form-check mb-3">
-            <input type="checkbox" class="form-check-input" id="validationFormCheck1" required>
-            <label class="form-check-label" for="validationFormCheck1">Check this checkbox</label>
-            <div class="invalid-feedback">Example invalid feedback text</div>
-          </div>
-        
-          <div class="form-check">
-            <input type="radio" class="form-check-input" id="validationFormCheck2" name="radio-stacked" required>
-            <label class="form-check-label" for="validationFormCheck2">Toggle this radio</label>
-          </div>
-          <div class="form-check mb-3">
-            <input type="radio" class="form-check-input" id="validationFormCheck3" name="radio-stacked" required>
-            <label class="form-check-label" for="validationFormCheck3">Or toggle this other radio</label>
-            <div class="invalid-feedback">More example invalid feedback text</div>
-          </div>
-        
-          <div class="mb-3">
-            <select class="form-select" required aria-label="select example">
-              <option selected>Open this select menu</option>
-              <option v-for="(item, idx) in ['One', 'Two', 'Three']" value="idx">
-                {{ item }}
-              </option>
-            </select>
-            <div class="invalid-feedback">Example invalid select feedback</div>
-          </div>
-        
-          <div class="mb-3">
-            <input type="file" class="form-control" aria-label="file upload" required>
-            <div class="invalid-feedback">Example invalid form file feedback</div>
-          </div>
-
-          <div class="mb-3 form-check form-switch">
-            <input class="form-check-input" type="checkbox" id="switchCheckDefault">
-            <label class="form-check-label" for="switchCheckDefault">Switch checkbox input</label>
-          </div>
-        
-          <div class="mb-3">
-            <button class="btn btn-primary" type="submit">Submit form</button>
-          </div>
-        </form>
       </div>
     </section>
 
