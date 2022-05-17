@@ -54,6 +54,7 @@
       id="context-menu"
       class="position-fixed dropdown-menu overflow-hidden"
       :class="{'show': ContextMenu.isShow}"
+      style="z-index: 1000001;"
     >
       <li v-for="list in ContextMenu.lists" class="m-0 list-style-none">
         <a
