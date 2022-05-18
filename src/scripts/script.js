@@ -22,6 +22,7 @@ import { createApp, reactive } from '/src/libraries/petite-vue.es.min.js';
       // { content: 'Features', link: '#features'},
     ],
     showMenu(e) {
+      if (!this.lists.length) return;
       this.isShow = true;
       const menuEl = document.querySelector('#context-menu');
       const windowWidth = window.innerWidth;

@@ -47,6 +47,7 @@ const ContextMenu = reactive({
     { content: 'Animate.css animations', link: '#animate-css-animations'},
   ],
   showMenu(e) {
+    if (!this.lists.length) return;
     this.isShow = true;
     const menuEl = document.querySelector('#context-menu');
     const windowWidth = window.innerWidth;
