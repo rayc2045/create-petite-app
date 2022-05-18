@@ -391,6 +391,7 @@
           class="dropdown-item"
           :href="list.link"
           @click="ContextMenu.isShow = false"
+          @contextmenu.prevent.stop="$el.click()"
         >{{ list.content }}</a>
       </li>
     </ul>
