@@ -14,8 +14,8 @@ The use of CSS utility classes and reactivity model provides by Petite-Vue helps
 
 ## Pre-packed
 
-- [Roboto Font](https://fonts.google.com/specimen/Roboto) - Material design font suitable for most websites
-- [MDBootstrap](https://mdbootstrap.com/) (v4.0.0) - Material design for Bootstrap v5, helps build responsive mobile-first sites quickly
+- [Noto Sans](https://fonts.google.com/noto/specimen/Noto+Sans) - the modern font suitable for most websites
+- [MDBootstrap](https://mdbootstrap.com/) (v4.0.0) - material design for Bootstrap v5, helps build responsive mobile-first sites quickly
 - [Font Awesome](https://fontawesome.com/) (v6.1.1) - the icon library and toolkit used by millions of designers and developers
 - [Animate.css](https://animate.style/) (v4.1.1) - ready-to-use animation library, great for emphasis, home pages, sliders, and attention-guiding hints
 - [Petite-Vue](https://github.com/vuejs/petite-vue) (v0.4.1) - progressive JavaScript library driven by `@vue/reactivity` for building web user interfaces
