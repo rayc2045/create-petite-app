@@ -56,7 +56,7 @@
       :class="{'ghost-element': !ContextMenu.isShow}"
       style="z-index: 1000001;"
     >
-      <li v-for="list in ContextMenu.lists" class="m-0 list-style-none">
+      <li v-for="list in ContextMenu.lists">
         <a
           class="dropdown-item"
           :href="list.link"

@@ -60,29 +60,29 @@
     <section id="features" class="container">
       <h2 class="fw-bold">Features</h2>
       <ul>
-        <li>Vue template syntax and reactivity model</li>
-        <li>Ready-to-use CSS Utility classes and animations</li>
-        <li>Dynamic import of JavaScript ES6 <a href="https://github.com/mdn/js-examples/tree/master/module-examples" target="_blank">modules</a></li>
+        <li class="mb-1">Vue template syntax and reactivity model</li>
+        <li class="mb-1">Ready-to-use CSS Utility classes and animations</li>
+        <li class="mb-1">Dynamic import of JavaScript ES6 <a href="https://github.com/mdn/js-examples/tree/master/module-examples" target="_blank">modules</a></li>
       </ul>
     </section>
 
     <section id="pre-packed" class="container">
       <h2 class="fw-bold">Pre-packed</h2>
       <ul>
-        <li><a href="https://fonts.google.com/noto/specimen/Noto+Sans" target="_blank">Noto Sans</a> - the modern font suitable for most websites</li>
-        <li><a href="https://mdbootstrap.com/" target="_blank">MDBootstrap</a> (v4.0.0) - material design for Bootstrap v5, helps build responsive mobile-first sites quickly</li>
-        <li><a href="https://fontawesome.com/" target="_blank">Font Awesome</a> (v6.1.1) - the icon library and toolkit used by millions of designers and developers</li>
-        <li><a href="https://animate.style/" target="_blank">Animate.css</a> (v4.1.1) - ready-to-use animation library, great for emphasis, home pages, sliders, and attention-guiding hints</li>
-        <li><a href="https://github.com/vuejs/petite-vue" target="_blank">Petite-Vue</a> (v0.4.1) - progressive JavaScript library driven by <code class="p-1 text-dark bg-lightgray-20 rounded">@vue/reactivity</code> for building web user interfaces</li>
+        <li class="mb-1"><a href="https://fonts.google.com/noto/specimen/Noto+Sans" target="_blank">Noto Sans</a> - the modern font suitable for most websites</li>
+        <li class="mb-1"><a href="https://mdbootstrap.com/" target="_blank">MDBootstrap</a> (v4.0.0) - material design for Bootstrap v5, helps build responsive mobile-first sites quickly</li>
+        <li class="mb-1"><a href="https://fontawesome.com/" target="_blank">Font Awesome</a> (v6.1.1) - the icon library and toolkit used by millions of designers and developers</li>
+        <li class="mb-1"><a href="https://animate.style/" target="_blank">Animate.css</a> (v4.1.1) - ready-to-use animation library, great for emphasis, home pages, sliders, and attention-guiding hints</li>
+        <li class="mb-1"><a href="https://github.com/vuejs/petite-vue" target="_blank">Petite-Vue</a> (v0.4.1) - progressive JavaScript library driven by <code class="p-1 text-dark bg-lightgray-20 rounded">@vue/reactivity</code> for building web user interfaces</li>
       </ul>
     </section>
 
     <section id="ways-of-quick-start" class="container">
       <h2 class="fw-bold">Ways of quick start</h2>
       <ul>
-        <li><a href="https://github.com/rayc2045/create-petite-app/generate" target="_blank">Create a new repo from this template on GitHub</a></li>
-        <li><a href="https://github.com/rayc2045/create-petite-app/archive/refs/heads/main.zip" target="_blank">Download this template to local</a></li>
-        <li>Create a new project from the command line (npm v5.2):</li>
+        <li class="mb-1"><a href="https://github.com/rayc2045/create-petite-app/generate" target="_blank">Create a new repo from this template on GitHub</a></li>
+        <li class="mb-1"><a href="https://github.com/rayc2045/create-petite-app/archive/refs/heads/main.zip" target="_blank">Download this template to local</a></li>
+        <li class="mb-1">Create a new project from the command line (npm v5.2):</li>
       </ul>
       <p
         class="p-4 d-block rounded bg-lightgray-20 cursor-pointer hint--top hint--rounded"
@@ -101,10 +101,10 @@
     <section id="usage" class="container">
       <h2 class="fw-bold">Usage</h2>
       <ul>
-        <li>Use <a href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer" target="_blank">Live Server</a> to preview the project</li>
-        <li>Use <a href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.live-sass" target="_blank">Live Sass Compiler</a> to compile Sass/Scss to CSS</li>
-        <li>Use <a href="https://marketplace.visualstudio.com/items?itemName=josee9988.minifyall" target="_blank">MinifyAll</a> to compress JavaScript code</li>
-        <li>Deploy production web applications on <a href="https://app.netlify.com/start" target="_blank">Netlify</a></li>
+        <li class="mb-1">Use <a href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer" target="_blank">Live Server</a> to preview the project</li>
+        <li class="mb-1">Use <a href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.live-sass" target="_blank">Live Sass Compiler</a> to compile Sass/Scss to CSS</li>
+        <li class="mb-1">Use <a href="https://marketplace.visualstudio.com/items?itemName=josee9988.minifyall" target="_blank">MinifyAll</a> to compress JavaScript code</li>
+        <li class="mb-1">Deploy production web applications on <a href="https://app.netlify.com/start" target="_blank">Netlify</a></li>
       </ul>
     </section>
 
@@ -386,7 +386,7 @@
       :class="{'ghost-element': !ContextMenu.isShow}"
       style="z-index: 1000001;"
     >
-      <li v-for="list in ContextMenu.lists" class="m-0 list-style-none">
+      <li v-for="list in ContextMenu.lists">
         <a
           class="dropdown-item"
           :href="list.link"
