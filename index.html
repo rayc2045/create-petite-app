@@ -33,8 +33,9 @@
     <script src="/src/scripts/script.js" type="module"></script>
   </head>
   <body
-    class="opacity-0 min-vh-100 px-2 px-sm-0 d-grid align-content-center cursor-default bg-light overflow-x-hidden"
-    :class="{ 'opacity-100': !isLoading }"
+    v-cloak
+    class="min-vh-100 px-2 px-sm-0 d-grid align-content-center cursor-default bg-light overflow-x-hidden"
+    :class="{ 'overflow-hidden': isLoading }"
     style="--animate-duration: 1.2s"
     @click="ContextMenu.isShow = false"
     @contextmenu.prevent="ContextMenu.showMenu($event)"
@@ -65,5 +66,15 @@
         >{{ list.content }}</a>
       </li>
     </ul>
+
+    <!-- Loader -->
+    <div
+      v-if="isLoading"
+      class="vw-100 vh-100 position-fixed start-0 top-0 d-flex justify-content-center align-items-center"
+      style="z-index: 1000001; background-color: rgba(0, 0, 0, .1);"
+      @contextmenu.prevent.stop
+    >
+      <div class="spinner-border" style="color: dimgray;"></div>
+    </div>
   </body>
 </html>
