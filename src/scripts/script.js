@@ -1,11 +1,11 @@
 'use strict';
 
 import { createApp } from '/src/libraries/petite-vue.es.min.js';
-import { ContextMenu } from '/src/scripts/components/components.js';
+import { ContextMenu } from '/src/scripts/components.js';
 
 ((window, document) => {
   ContextMenu.lists = [
-    // { content: 'Features', link: '#features'},
+    // { content: 'Features', link: '#features' },
   ];
 
   const STORAGE_KEY = 'storage-key';

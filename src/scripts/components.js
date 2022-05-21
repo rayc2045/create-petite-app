@@ -3,7 +3,7 @@ import { reactive } from '/src/libraries/petite-vue.es.min.js';
 export const ContextMenu = reactive({
   isShow: false,
   lists: [
-    // { content: 'Features', link: '#features'},
+    // { content: 'Features', link: '#features' },
   ],
   showMenu(e) {
     if (!this.lists.length) return;

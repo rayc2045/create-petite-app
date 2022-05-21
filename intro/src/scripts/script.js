@@ -1,17 +1,17 @@
 'use strict';
 
 import { createApp } from '/src/libraries/petite-vue.es.min.js';
-import { ContextMenu } from '/src/scripts/components/components.js';
-import { fetchData, copyText, toggleClasses } from '/src/scripts/utils/utils.js';
+import { ContextMenu } from '/src/scripts/components.js';
+import { fetchData, copyText, toggleClasses } from '/src/scripts/utils.js';
 
 ContextMenu.lists = [
-  { content: 'Features', link: '#features'},
-  { content: 'Pre-packed', link: '#pre-packed'},
-  { content: 'Ways of quick start', link: '#ways-of-quick-start'},
-  { content: 'Usage', link: '#usage'},
-  { content: 'Petite-Vue syntax', link: '#petite-vue-template-syntax'},
-  { content: 'MDBootstrap examples', link: '#mdbootstrap-examples'},
-  { content: 'Animate.css animations', link: '#animate-css-animations'},
+  { content: 'Features', link: '#features' },
+  { content: 'Pre-packed', link: '#pre-packed' },
+  { content: 'Ways of quick start', link: '#ways-of-quick-start' },
+  { content: 'Usage', link: '#usage' },
+  { content: 'Petite-Vue syntax', link: '#petite-vue-template-syntax' },
+  { content: 'MDBootstrap examples', link: '#mdbootstrap-examples' },
+  { content: 'Animate.css animations', link: '#animate-css-animations' },
 ]
 
 const petiteVueExample = `
