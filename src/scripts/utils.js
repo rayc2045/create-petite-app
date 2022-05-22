@@ -20,6 +20,13 @@ export function getParamsByUrl(url = window.location.href) {
   return entries;
 }
 
+export function getScrollProgress() {
+  const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+	const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+	const scrolled = (winScroll / height) * 100;
+  return Math.round(scrolled) + '%';
+}
+
 export function getRandomNum(min, max) {
   return Math.floor(Math.random() * max) + min;
 }
