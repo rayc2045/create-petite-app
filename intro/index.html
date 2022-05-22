@@ -278,7 +278,6 @@
           </div>
         </div>
       </div>
-      
     </section>
 
     <section id="animate-css-animations" class="container">
@@ -325,8 +324,8 @@
     </section>
 
     <!-- Progress Bar -->
-    <!-- <div class="progress w-100 position-fixed start-0 top-0" style="background-color: transparent;">
-      <div class="progress-bar" style="background-color: orangered; transition: .2s;" :style="{ width: scrollProgress }" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+    <!-- <div class="progress bg-transparent w-100 position-fixed start-0 top-0">
+      <div class="progress-bar bg-danger" :style="`transition: .2s; width: ${scrollProgress}`" role="progressbar" :aria-valuenow="Number(scrollProgress.replace('%', ''))" aria-valuemin="0" aria-valuemax="100"></div>
     </div> -->
 
     <!-- GitHub corner -->
