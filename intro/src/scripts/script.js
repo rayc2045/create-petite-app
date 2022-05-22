@@ -2,7 +2,7 @@
 
 import { createApp } from '/src/libraries/petite-vue.es.min.js';
 import { ContextMenu } from '/src/scripts/components.js';
-import { fetchData, copyText, toggleClasses } from '/src/scripts/utils.js';
+import { fetchData, copyText, toggleClasses, getScrollProgress } from '/src/scripts/utils.js';
 
 ContextMenu.lists = [
   { content: 'Features', link: '#features' },
@@ -51,11 +51,15 @@ const App = {
   isPrefersReducedMotion: window.matchMedia('(prefers-reduced-motion: reduce)')
     .matches,
   isLoading: true,
+  scrollProgress: '0%',
   petiteVueExample,
   animations: [],
   async init() {
     this.animations = await fetchData('./src/data/animations.json');
     this.isLoading = false;
+  },
+  updateScrollProgress() {
+    this.scrollProgress = getScrollProgress();
   },
   copyText,
   removeStyleAttr(str) {
@@ -68,4 +72,8 @@ const App = {
 
 createApp(App).mount();
 window.onresize = () => (ContextMenu.isShow = false);
-window.onscroll = () => (ContextMenu.isShow = false);
+
+window.onscroll = () => {
+  App.updateScrollProgress();
+  ContextMenu.isShow = false;
+};
