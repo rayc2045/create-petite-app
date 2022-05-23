@@ -2,9 +2,9 @@
 
 # 🤘 Create Petite App
 
-`create-petite-app` is a frontend-template includes libraries MDBootstrap, Animate.css and Petite-Vue.
+`create-petite-app` is a frontend template that includes libraries MDBootstrap, Animate.css, and Petite-Vue.
 
-The use of CSS utility classes and reactivity model provides by Petite-Vue helps build projects very fast!
+The use of CSS utility classes and the reactivity model provided by Petite-Vue helps build projects very fast!
 
 ## Features
 
