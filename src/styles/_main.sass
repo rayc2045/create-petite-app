@@ -5,12 +5,12 @@
   background-color: #E6E6E6 // rgba(lightgray, .5)
   
 html
-  // scrollbar-width: none
+  font-size: 16px
   scroll-behavior: smooth
+  // scrollbar-width: none
 
 body
-  font-family: 'Noto Sans', sans-serif
-  font-size: 16px
+  font-family: "Noto Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"
 
 [v-cloak]
   opacity: 0
@@ -20,33 +20,35 @@ a:hover
   @media (min-width: 992px)
     text-decoration: underline
 
-button a:hover,
-a.btn:hover, a.nav-link:hover,
-.dropdown-menu a:hover
-  text-decoration: none
+button a,
+.dropdown-menu a,
+a.btn,
+a.nav-link
+  &:hover
+    text-decoration: none
 
 .w-1
-  width: 1em
+  width: 1rem
 .w-2
-  width: 2em
+  width: 2rem
 .w-3
-  width: 3em
+  width: 3rem
 .w-4
-  width: 4em
+  width: 4rem
 .w-5
-  width: 5em
+  width: 5rem
 .w-6
-  width: 6em
+  width: 6rem
 
 .btn-gray, .btn-dimgray
   color: white
   &:hover
     color: white
-.btn-gray
-  background-color: gray
-.btn-dimgray
-  background-color: dimgray
 
+.btn-gray, .bg-gray
+  background-color: gray
+.btn-dimgray, .bg-dimgray
+  background-color: dimgray
 .bg-lightgray-20
   background-color: #F1F1F1 // rgba(lightgray, .2)
 
@@ -54,7 +56,6 @@ a.btn:hover, a.nav-link:hover,
   cursor: default
 .cursor-pointer
   cursor: pointer
-
 .disabled
   cursor: no-drop
 
