@@ -58,7 +58,7 @@
       v-if="ContextMenu.lists.length"
       id="context-menu"
       class="d-none d-lg-block position-fixed dropdown-menu show overflow-hidden"
-      :class="{'ghost-element': !ContextMenu.isShow}"
+      :class="{ 'opacity-0 pe-none': !ContextMenu.isShow }"
       style="z-index: 1000001;"
     >
       <li v-for="list in ContextMenu.lists">
