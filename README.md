@@ -1,4 +1,4 @@
-<img src="https://raw.githubusercontent.com/rayc2045/create-petite-app/main/assets/images/programming.svg" width="320" />
+<img src="https://raw.githubusercontent.com/rayc2045/create-petite-app/main/intro/images/programming.svg" width="320" />
 
 # 🤘 Create Petite App
 
