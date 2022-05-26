@@ -2,7 +2,6 @@
 
 import { createApp } from '/src/libraries/petite-vue.es.min.js';
 import { ContextMenu } from '/src/scripts/components.js';
-import { toggleClasses } from '/src/scripts/utils.js';
 
 ((window, document) => {
   ContextMenu.lists = [
@@ -18,7 +17,6 @@ import { toggleClasses } from '/src/scripts/utils.js';
     async init() {
       this.isLoading = false;
     },
-    toggleClasses
   };
 
   createApp(App).mount();
