@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./images/favicon.ico">
+    <title>Lomography LomoInstant Automat</title>
+    <meta name="title" content="Lomography LomoInstant Automat | flyingV">
+    <meta name="description" content="以最高階的自動測光系統及創意功能，打造全新拍立得 Lomo'Instant Automat!">
+    <meta name="keywords" content="front-end responsive utility-classes grid-layout responsive-design vue-template frontend-template animate-css front-end-template vue3 bootstrap5 petite-vue">
+    <meta name="author" content="Ray Chang">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://create-petite-app.netlify.app/demo/">
+    <meta property="og:title" content="Lomography LomoInstant Automat | flyingV">
+    <meta property="og:description" content="以最高階的自動測光系統及創意功能，打造全新拍立得 Lomo'Instant Automat!">
+    <meta property="og:image" content="https://static.flyingv.asia/static/1024x768/projects/13958/57f5d1b087dde.png">
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://create-petite-app.netlify.app/demo/">
+    <meta property="twitter:title" content="Lomography LomoInstant Automat | flyingV">
+    <meta property="twitter:description" content="以最高階的自動測光系統及創意功能，打造全新拍立得 Lomo'Instant Automat!">
+    <meta property="twitter:image" content="https://static.flyingv.asia/static/1024x768/projects/13958/57f5d1b087dde.png">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans:300,400,500,700&display=swap" />
+    <!-- Styles & Scripts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="/src/styles/style.css">
+    <script src="/src/libraries/mdb.min.js" defer></script>
+    <script src="./src/scripts/script.js" type="module"></script>
+  </head>
+  <body
+    v-cloak
+    class="min-vh-100 bg-white cursor-default"
+    :class="{ 'overflow-hidden': isLoading }"
+    style="--animate-duration: 1.2s"
+    @click="ContextMenu.isShow = false"
+    @contextmenu.prevent="ContextMenu.showMenu($event)"
+    @selectstart.prevent
+    @dragstart.prevent
+    @vue:mounted="init"
+  >
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light shadow-none border-bottom py-1">
+        <div class="container justify-content-start position-relative">
+          <!-- toggle menu -->
+          <button
+            class="navbar-toggler text-danger"
+            type="button"
+            data-mdb-toggle="collapse"
+            data-mdb-target="#navbarButtons"
+            aria-controls="navbarButtons"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <i class="fas fa-bars"></i>
+          </button>
+
+          <a class="navbar-brand me-2" href="https://www.flyingv.cc/">
+            <img
+              src="./images/logo.svg"
+              height="64"
+              alt="FlyingV Logo"
+              loading="lazy"
+            />
+          </a>
+
+          <div class="collapse navbar-collapse pb-3 pb-lg-0" id="navbarButtons">
+            <ul class="navbar-nav mb-2 mb-lg-0">
+              <li class="nav-item mx-2">
+                <a class="nav-link text-black" href="#"><small>關於</small></a>
+              </li>
+              <li class="nav-item mx-2">
+                <a class="nav-link text-black" href="#"><small>提案</small></a>
+              </li>
+              <li class="nav-item mx-2">
+                <a class="nav-link text-black" href="#"><small>探索</small></a>
+              </li>
+            </ul>
+            <form class="d-flex input-group w-auto ms-lg-3">
+              <span class="input-group-text border-0" id="search-addon">
+                <i class="fas fa-search"></i>
+              </span>
+              <input type="search" class="form-control rounded" placeholder="搜尋專案" aria-label="Search" aria-describedby="search-addon">
+            </form>
+          </div>
+
+          <div class="dropdown ms-auto ps-4 py-1 border-start position-absolute" style="right: 1rem; top: .75rem;">
+            <a class="dropdown-toggle d-flex align-items-center hidden-arrow" href="#" id="navbarDropdownMenuAvatar" role="button" data-mdb-toggle="dropdown" aria-expanded="false" @click="$el.querySelectorAll('svg').forEach(el => el.classList.toggle('d-none'))">
+              <img src="./images/nonuser.svg" class="rounded-circle" height="42" alt="Black and White Portrait of a Man" loading="lazy">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <g fill="none" fill-rule="evenodd">
+                  <path fill="#212121" d="M12.594 14.747l4.16-4.274C17.28 9.93 16.906 9 16.158 9H7.84c-.748 0-1.122.93-.594 1.473l4.162 4.274c.325.337.857.337 1.185 0z"></path>
+                </g>
+              </svg>
+              <svg class="d-none" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <g fill="none" fill-rule="evenodd">
+                  <path fill="#212121" d="M12.594 9.253l4.16 4.274c.527.543.153 1.473-.595 1.473H7.84c-.748 0-1.122-.93-.594-1.473l4.162-4.274c.325-.337.857-.337 1.185 0z"></path>
+                </g>
+              </svg>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuAvatar">
+              <li>
+                <a class="dropdown-item" href="#">登入</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">註冊</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Context menu -->
+    <ul
+      v-if="ContextMenu.lists.length"
+      id="context-menu"
+      class="d-none d-lg-block position-fixed dropdown-menu show overflow-hidden"
+      :class="{ 'opacity-0 pe-none': !ContextMenu.isShow }"
+      style="z-index: 1000001;"
+    >
+      <li v-for="list in ContextMenu.lists">
+        <a
+          class="dropdown-item"
+          :href="list.link"
+          @click="ContextMenu.isShow = false"
+          @contextmenu.prevent.stop="$el.click()"
+        >{{ list.content }}</a>
+      </li>
+    </ul>
+
+    <!-- Loader -->
+    <div
+      v-if="isLoading"
+      class="vw-100 vh-100 position-fixed start-0 top-0 d-flex justify-content-center align-items-center"
+      style="z-index: 1000001; background-color: rgba(0, 0, 0, .1);"
+      @contextmenu.prevent.stop
+    >
+      <div class="spinner-border" style="color: dimgray;"></div>
+    </div>
+  </body>
+</html>
