@@ -34,7 +34,7 @@
   </head>
   <body
     v-cloak
-    class="bg-light cursor-default"
+    class="min-vh-100 bg-light cursor-default"
     :class="{ 'overflow-hidden': isLoading }"
     style="--animate-duration: 1.2s"
     @click="ContextMenu.isShow = false"
@@ -44,7 +44,7 @@
     @vue:mounted="init"
   >
     <!-- Content -->
-    <div class="min-vh-100 d-grid align-content-center">
+    <div class="d-grid align-content-center">
       <div class="container text-center">
         <h1>Hello, developer! <span class="d-inline-block animate__animated animate__wobble animate__infinite">👋</span></h1>
         <h5 style="margin-left: -0.6em;">
