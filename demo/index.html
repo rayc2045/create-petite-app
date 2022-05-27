@@ -84,8 +84,26 @@
             </form>
           </div>
 
-          <div class="dropdown ms-auto ps-4 py-1 border-start position-absolute" style="right: 1rem; top: .75rem;">
-            <a class="dropdown-toggle d-flex align-items-center hidden-arrow text-decoration-none" href="#" id="navbarDropdownMenuAvatar" role="button" data-mdb-toggle="dropdown" aria-expanded="false" @click="$el.querySelectorAll('i').forEach(el => el.classList.toggle('d-none'))">
+          <div class="ms-auto position-absolute d-flex dropdown" style="right: 1rem; top: .75rem;">
+            <div class="dropdown me-1">
+              <button
+                type="button"
+                class="me-4 px-2 py-1 position-realtive bg-white shadow-none border-1 dropdown-toggle"
+                style="margin-top: .5rem;"
+                id="dropdownMenuOffset"
+                data-mdb-toggle="dropdown"
+                aria-expanded="false"
+                data-mdb-offset="10,20"
+              >
+                <small>中文</small>
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuOffset">
+                <li><a class="dropdown-item" href="#">English</a></li>
+                <li><a class="dropdown-item" href="#">日本語</a></li>
+              </ul>
+            </div>
+
+            <a class="dropdown-toggle d-flex ps-4 py-1 align-items-center hidden-arrow text-decoration-none border-start" href="#" id="navbarDropdownMenuAvatar" role="button" data-mdb-toggle="dropdown" aria-expanded="false" @click="$el.querySelectorAll('i').forEach(el => el.classList.toggle('d-none'))">
               <img src="./images/nonuser.svg" class="rounded-circle me-2" height="42" alt="Black and White Portrait of a Man" loading="lazy">
               <i class="fas fa-caret-down text-dark"></i>
               <i class="d-none fas fa-caret-up text-dark"></i>
@@ -101,8 +119,54 @@
           </div>
         </div>
       </nav>
-      
     </header>
+
+    <!-- Project introduction -->
+    <section class="container mt-5">
+      <span class="py-2 badge badge-light rounded-0">科技設計</span>
+      <h4 class=" my-2 fw-bold">Lomography LomoInstant Automat</h4>
+      <div class="row mt-4">
+        <div class="col-sm-8">
+          <div class="position-relative w-100 ratio-16x9" @click="[...$el.children].forEach(el => el.classList.toggle('d-none'))">
+            <!-- video cover -->
+            <img class="img-fluid cursor-pointer" style="filter: brightness(.9);" src="https://i.vimeocdn.com/video/589443474-aeb82d747360325d73707300f887727cc799d7bf7c26b361ee4d3e0538a17a15-d?mw=768" alt="">
+            <!-- play button in center -->
+            <div
+              class="position-absolute start-50 top-50
+                d-flex justify-content-center align-items-center
+                border border-2 border-white rounded-circle cursor-pointer"
+              style="width: 2.5rem; height: 2.5rem; transform: translate(-50%, -50%);"
+            >
+              <big><i class="fas fa-caret-right text-white"></i></big>
+            </div>
+            <!-- embed viemo video -->
+            <div class="d-none position-relative" style="padding-top: 56.25%;">
+              <div class="position-absolute top-0 start-0 w-100 h-100">
+                <iframe src="//player.vimeo.com/video/181010761" width="100%" height="100%" allowfullscreen="" frameborder="0" id="player"></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="mb-4">
+            <p class="mb-1 text-muted"><small>目標 NTD$200,000</small></p>
+            <h2 class="fw-bold">$3,052,585</h2>
+          </div>
+          <div class="mb-4">
+            <p class="mb-1 text-muted"><small>贊助人數</small></p>
+            <h2 class="fw-bold">703 人</h2>
+          </div>
+          <div class="mb-4">
+            <p class="mb-1 text-muted"><small>已結束</small></p>
+          </div>
+          <div class="mb-4">
+            <p class="border-start border-5 border-danger ps-3" style="font-size: 0.5rem;">
+              此計劃於 2016/09/02 - 2016/10/08 期間募資，專案募資成功！
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- Context menu -->
     <ul
