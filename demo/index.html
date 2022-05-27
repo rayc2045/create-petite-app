@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans:300,400,500,700&display=swap" />
     <!-- Styles & Scripts -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-    <link rel="stylesheet" href="/src/styles/style.css">
+    <link rel="stylesheet" href="./src/styles/style.css">
     <script src="/src/libraries/mdb.min.js" defer></script>
     <script src="./src/scripts/script.js" type="module"></script>
   </head>
@@ -45,7 +45,7 @@
   >
     <header>
       <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-none border-bottom py-1 sticky-top">
-        <div class="container justify-content-start position-relative">
+        <div class="container-xl justify-content-start position-relative">
           <!-- toggle menu -->
           <button
             class="navbar-toggler text-danger"
@@ -58,26 +58,22 @@
           >
             <i class="fas fa-bars"></i>
           </button>
-
+          <!-- logo -->
           <a class="navbar-brand me-2" href="https://www.flyingv.cc/">
-            <img
-              src="./images/logo.svg"
-              height="64"
-              alt="FlyingV Logo"
-              loading="lazy"
+            <img src="./images/logo.svg" height="64" alt="FlyingV Logo" loading="lazy"
             />
           </a>
 
           <div class="collapse navbar-collapse pb-3 pb-lg-0" id="navbarButtons">
             <ul class="navbar-nav mb-2 mb-lg-0">
               <li class="nav-item mx-2">
-                <a class="nav-link text-black" href="https://www.flyingv.cc/about"><small>關於</small></a>
+                <a class="nav-link text-black text-hover-danger" href="https://www.flyingv.cc/about"><small>關於</small></a>
               </li>
               <li class="nav-item mx-2">
-                <a class="nav-link text-black" href="https://www.flyingv.cc/projects/create"><small>提案</small></a>
+                <a class="nav-link text-black text-hover-danger" href="https://www.flyingv.cc/projects/create"><small>提案</small></a>
               </li>
               <li class="nav-item mx-2">
-                <a class="nav-link text-black" href="https://www.flyingv.cc/projects"><small>探索</small></a>
+                <a class="nav-link text-black text-hover-danger" href="https://www.flyingv.cc/projects"><small>探索</small></a>
               </li>
             </ul>
             <form class="d-flex input-group w-auto ms-lg-3">
@@ -89,30 +85,23 @@
           </div>
 
           <div class="dropdown ms-auto ps-4 py-1 border-start position-absolute" style="right: 1rem; top: .75rem;">
-            <a class="dropdown-toggle d-flex align-items-center hidden-arrow" href="#" id="navbarDropdownMenuAvatar" role="button" data-mdb-toggle="dropdown" aria-expanded="false" @click="$el.querySelectorAll('svg').forEach(el => el.classList.toggle('d-none'))">
-              <img src="./images/nonuser.svg" class="rounded-circle" height="42" alt="Black and White Portrait of a Man" loading="lazy">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                <g fill="none" fill-rule="evenodd">
-                  <path fill="#212121" d="M12.594 14.747l4.16-4.274C17.28 9.93 16.906 9 16.158 9H7.84c-.748 0-1.122.93-.594 1.473l4.162 4.274c.325.337.857.337 1.185 0z"></path>
-                </g>
-              </svg>
-              <svg class="d-none" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                <g fill="none" fill-rule="evenodd">
-                  <path fill="#212121" d="M12.594 9.253l4.16 4.274c.527.543.153 1.473-.595 1.473H7.84c-.748 0-1.122-.93-.594-1.473l4.162-4.274c.325-.337.857-.337 1.185 0z"></path>
-                </g>
-              </svg>
+            <a class="dropdown-toggle d-flex align-items-center hidden-arrow text-decoration-none" href="#" id="navbarDropdownMenuAvatar" role="button" data-mdb-toggle="dropdown" aria-expanded="false" @click="$el.querySelectorAll('i').forEach(el => el.classList.toggle('d-none'))">
+              <img src="./images/nonuser.svg" class="rounded-circle me-2" height="42" alt="Black and White Portrait of a Man" loading="lazy">
+              <i class="fas fa-caret-down text-dark"></i>
+              <i class="d-none fas fa-caret-up text-dark"></i>
             </a>
             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuAvatar">
               <li>
-                <a class="dropdown-item" href="https://www.flyingv.cc/login">登入</a>
+                <a class="dropdown-item" href="login.html">登入</a>
               </li>
               <li>
-                <a class="dropdown-item" href="https://www.flyingv.cc/register">註冊</a>
+                <a class="dropdown-item" href="register.html">註冊</a>
               </li>
             </ul>
           </div>
         </div>
       </nav>
+      
     </header>
 
     <!-- Context menu -->
