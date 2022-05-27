@@ -66,6 +66,26 @@
 
           <div class="collapse navbar-collapse pb-3 pb-lg-0" id="navbarButtons">
             <ul class="navbar-nav mb-2 mb-lg-0">
+              <li class="nav-item">
+                <div class="nav-link d-sm-none dropdown me-1">
+                  <!-- lang button -->
+                  <button
+                    type="button"
+                    class="px-2 py-1 position-realtive bg-white shadow-none border-1 dropdown-toggle"
+                    style="margin-top: .5rem;"
+                    id="dropdownMenuOffset"
+                    data-mdb-toggle="dropdown"
+                    aria-expanded="false"
+                    data-mdb-offset="10,20"
+                  >
+                    <small class="pe-3">中文</small>
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuOffset">
+                    <li><a class="dropdown-item" href="#">English</a></li>
+                    <li><a class="dropdown-item" href="#">日本語</a></li>
+                  </ul>
+                </div>
+              </li>
               <li class="nav-item mx-2">
                 <a class="nav-link text-black text-hover-danger" href="https://www.flyingv.cc/about"><small>關於</small></a>
               </li>
@@ -85,7 +105,8 @@
           </div>
 
           <div class="ms-auto position-absolute d-flex dropdown" style="right: 1rem; top: .75rem;">
-            <div class="dropdown me-1">
+            <div class="d-none d-sm-block dropdown me-1">
+              <!-- lang button -->
               <button
                 type="button"
                 class="me-4 px-2 py-1 position-realtive bg-white shadow-none border-1 dropdown-toggle"
@@ -102,8 +123,8 @@
                 <li><a class="dropdown-item" href="#">日本語</a></li>
               </ul>
             </div>
-
-            <a class="dropdown-toggle d-flex ps-4 py-1 align-items-center hidden-arrow text-decoration-none border-start" href="#" id="navbarDropdownMenuAvatar" role="button" data-mdb-toggle="dropdown" aria-expanded="false" @click="$el.querySelectorAll('i').forEach(el => el.classList.toggle('d-none'))">
+            <!-- identity -->
+            <a class="dropdown-toggle ps-4 py-1 d-flex align-items-center hidden-arrow text-decoration-none border-start" href="#" id="navbarDropdownMenuAvatar" role="button" data-mdb-toggle="dropdown" aria-expanded="false" @click="$el.querySelectorAll('i').forEach(el => el.classList.toggle('d-none'))">
               <img src="./images/nonuser.svg" class="rounded-circle me-2" height="42" alt="Black and White Portrait of a Man" loading="lazy">
               <i class="fas fa-caret-down text-dark"></i>
               <i class="d-none fas fa-caret-up text-dark"></i>
@@ -173,8 +194,37 @@
           </div>
         </div>
         <!-- progress -->
-        <div class="col-sm-8">
-
+        <div class="col-sm-8 position-relative">
+          <div class="progress" style="margin-top: 4rem;">
+            <div
+              class="progress-bar bg-danger"
+              role="progressbar"
+              style="width: 90%;"
+              aria-valuenow="90"
+              aria-valuemin="0"
+              aria-valuemax="100"
+            ></div>
+            <div class="position-absolute w-100 d-flex" style="margin-top: -1.8rem">
+              <div class="d-flex flex-column">
+                <big class="text-danger fw-bold mb-3">$0</big>
+                <big class="text-black">募資開始</big>
+              </div>
+              <div class="position-absolute d-flex flex-column start-50">
+                <!-- circle -->
+                <div
+                  class="position-absolute top-50 d-flex justify-content-center align-items-center rounded-circle bg-danger"
+                  style="width: 1rem; height: 1rem; left: -1.5rem; transform: translateY(-50%)"
+                >
+                  <div
+                    class=" rounded-circle bg-white"
+                    style="width: .55rem; height: .55rem;"
+                  ></div>
+                </div>
+                <big class="text-danger fw-bold mb-3">$200,000</big>
+                <big class="text-black">募資目標</big>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
