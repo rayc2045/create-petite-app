@@ -109,14 +109,16 @@
               <!-- lang button -->
               <button
                 type="button"
-                class="me-4 px-2 py-1 position-realtive bg-white shadow-none border-1 dropdown-toggle"
+                class="me-4 px-2 py-1 position-realtive bg-white shadow-none border-1"
                 style="margin-top: .5rem;"
                 id="dropdownMenuOffset"
                 data-mdb-toggle="dropdown"
                 aria-expanded="false"
                 data-mdb-offset="10,20"
+                @click="toggleClasses($el.querySelector('i'), 'fa-caret-down fa-caret-up')"
               >
                 <small class="pe-3">中文</small>
+                <i class="fas fa-caret-down text-dark"></i>
               </button>
               <ul class="dropdown-menu" aria-labelledby="dropdownMenuOffset">
                 <li><a class="dropdown-item" href="#">English</a></li>
@@ -124,10 +126,9 @@
               </ul>
             </div>
             <!-- identity -->
-            <a class="dropdown-toggle ps-4 py-1 d-flex align-items-center hidden-arrow text-decoration-none border-start" href="#" id="navbarDropdownMenuAvatar" role="button" data-mdb-toggle="dropdown" aria-expanded="false" @click="$el.querySelectorAll('i').forEach(el => el.classList.toggle('d-none'))">
+            <a class="dropdown-toggle ps-4 py-1 d-flex align-items-center hidden-arrow text-decoration-none border-start" href="#" id="navbarDropdownMenuAvatar" role="button" data-mdb-toggle="dropdown" aria-expanded="false" @click="toggleClasses($el.querySelector('i'), 'fa-caret-down fa-caret-up')">
               <img src="./images/nonuser.svg" class="rounded-circle me-2" height="42" alt="Black and White Portrait of a Man" loading="lazy">
               <i class="fas fa-caret-down text-dark"></i>
-              <i class="d-none fas fa-caret-up text-dark"></i>
             </a>
             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuAvatar">
               <li>
