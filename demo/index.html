@@ -43,8 +43,8 @@
     @dragstart.prevent
     @vue:mounted="init"
   >
-    <header class="sticky-top">
-      <nav class="py-1 navbar navbar-expand-lg navbar-light bg-white shadow-none border-bottom">
+    <header>
+      <nav class="py-1 sticky-top navbar navbar-expand-lg navbar-light bg-white shadow-none border-bottom">
         <div class="position-relative container-xl justify-content-start">
           <!-- toggle menu -->
           <button
@@ -141,127 +141,131 @@
           </div>
         </div>
       </nav>
+      <!-- Project intro -->
+      <section class="mt-5 container-fluid container-lg">
+        <span class="py-2 badge badge-light rounded-0">科技設計</span>
+        <h4 class="my-2 fw-bold">Lomography LomoInstant Automat</h4>
+        <div class="mt-4 row">
+          <div class="col-12 px-0 col-md-8 px-md-2">
+            <!-- video block -->
+            <div class="position-relative w-100 ratio-16x9" @click="[...$el.children].forEach(el => el.classList.toggle('d-none'))">
+              <!-- video cover -->
+              <img class="img-fluid w-100 cursor-pointer" style="filter: brightness(.9);" src="https://i.vimeocdn.com/video/589443474-aeb82d747360325d73707300f887727cc799d7bf7c26b361ee4d3e0538a17a15-d?mw=768" alt="">
+              <!-- play button in center -->
+              <div
+                class="
+                  absolute-center rounded-circle
+                  d-flex justify-content-center align-items-center
+                  border border-2 border-white cursor-pointer"
+                style="width: 2.5rem; height: 2.5rem;"
+              >
+                <big><i class="fas fa-caret-right text-white"></i></big>
+              </div>
+              <!-- embed viemo video -->
+              <div class="d-none position-relative" style="padding-top: 56.25%;">
+                <div class="position-absolute top-0 start-0 w-100 h-100">
+                  <iframe src="//player.vimeo.com/video/181010761" width="100%" height="100%" allowfullscreen="" frameborder="0" id="player"></iframe>
+                </div>
+              </div>
+            </div>
+            <!-- progress -->
+            <div class="px-md-0 my-4 py-4 d-xl-none position-relative container-fluid">
+              <div class="progress">
+                <div
+                  class="progress-bar bg-danger"
+                  role="progressbar"
+                  style="width: 90%;"
+                  aria-valuenow="90"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                ></div>
+                <div class="position-absolute w-100 d-flex" style="margin-top: -1.8rem">
+                  <div class="d-flex flex-column">
+                    <big class="text-danger fw-bold mb-3">$0</big>
+                    <big class="text-black">募資開始</big>
+                  </div>
+                  <div class="position-absolute d-flex flex-column start-50">
+                    <!-- circle -->
+                    <div
+                      class="position-absolute top-50 d-flex justify-content-center align-items-center rounded-circle bg-danger"
+                      style="width: 1rem; height: 1rem; left: -1.5rem; transform: translateY(-50%)"
+                    >
+                      <div
+                        class=" rounded-circle bg-white"
+                        style="width: .55rem; height: .55rem;"
+                      ></div>
+                    </div>
+                    <big class="text-danger fw-bold mb-3">$200,000</big>
+                    <big class="text-black">募資目標</big>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 px-4 col-md-4 px-md-3">
+            <!-- progress -->
+            <div class="d-none d-xl-block mb-4 py-4 position-relative">
+              <div class="progress">
+                <div
+                  class="progress-bar bg-danger"
+                  role="progressbar"
+                  style="width: 90%;"
+                  aria-valuenow="90"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                ></div>
+                <div class="position-absolute w-100 d-flex" style="margin-top: -1.8rem">
+                  <div class="d-flex flex-column">
+                    <big class="text-danger fw-bold mb-3">$0</big>
+                    <big class="text-black">募資開始</big>
+                  </div>
+                  <div class="position-absolute d-flex flex-column start-50">
+                    <!-- circle -->
+                    <div
+                      class="position-absolute top-50 d-flex justify-content-center align-items-center rounded-circle bg-danger"
+                      style="width: 1rem; height: 1rem; left: -1.5rem; transform: translateY(-50%)"
+                    >
+                      <div
+                        class=" rounded-circle bg-white"
+                        style="width: .55rem; height: .55rem;"
+                      ></div>
+                    </div>
+                    <big class="text-danger fw-bold mb-3">$200,000</big>
+                    <big class="text-black">募資目標</big>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="mb-4">
+              <p class="mb-1 text-muted"><small>目標 NTD$200,000</small></p>
+              <h2 class="fw-bold">$3,052,585</h2>
+            </div>
+            <div class="mb-4">
+              <p class="mb-1 text-muted"><small>贊助人數</small></p>
+              <h2 class="fw-bold">703 人</h2>
+            </div>
+            <div class="mb-4">
+              <p class="mb-1 text-muted"><small>已結束</small></p>
+            </div>
+            <div class="mb-4">
+              <p class="border-start border-5 border-danger ps-3" style="font-size: 0.5rem;">
+                此計劃於 2016/09/02 - 2016/10/08 期間募資，專案募資成功！
+              </p>
+            </div>
+            <div class="d-flex">
+              <img class="rounded-circle" src="https://static.flyingv.asia/static/square/users/5b2f0a6e0f5d3.jpg" alt="" height="48px">
+              <div class="ms-2 d-flex flex-column">
+                <small class="mb-0 text-muted">提案者</small>
+                <a class="text-dark text-hover-danger text-decoration-underline" href="https://www.lomography.tw/" target="_blank" rel="noreferrer noopener">Lomography Taiwan</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </header>
 
-    <!-- Project intro -->
-    <section class="mt-5 container-fluid container-lg">
-      <span class="py-2 badge badge-light rounded-0">科技設計</span>
-      <h4 class="my-2 fw-bold">Lomography LomoInstant Automat</h4>
-      <div class="row mt-4">
-        <div class="col-12 col-md-8 px-0 px-md-2">
-          <!-- video block -->
-          <div class="position-relative w-100 ratio-16x9" @click="[...$el.children].forEach(el => el.classList.toggle('d-none'))">
-            <!-- video cover -->
-            <img class="img-fluid w-100 cursor-pointer" style="filter: brightness(.9);" src="https://i.vimeocdn.com/video/589443474-aeb82d747360325d73707300f887727cc799d7bf7c26b361ee4d3e0538a17a15-d?mw=768" alt="">
-            <!-- play button in center -->
-            <div
-              class="absolute-center rounded-circle
-                d-flex justify-content-center align-items-center
-                border border-2 border-white cursor-pointer"
-              style="width: 2.5rem; height: 2.5rem;"
-            >
-              <big><i class="fas fa-caret-right text-white"></i></big>
-            </div>
-            <!-- embed viemo video -->
-            <div class="d-none position-relative" style="padding-top: 56.25%;">
-              <div class="position-absolute top-0 start-0 w-100 h-100">
-                <iframe src="//player.vimeo.com/video/181010761" width="100%" height="100%" allowfullscreen="" frameborder="0" id="player"></iframe>
-              </div>
-            </div>
-          </div>
-          <!-- progress -->
-          <div class="mb-5 px-md-0 d-xl-none position-relative container-fluid">
-            <div class="progress" style="margin-top: 4rem;">
-              <div
-                class="progress-bar bg-danger"
-                role="progressbar"
-                style="width: 90%;"
-                aria-valuenow="90"
-                aria-valuemin="0"
-                aria-valuemax="100"
-              ></div>
-              <div class="position-absolute w-100 d-flex" style="margin-top: -1.8rem">
-                <div class="d-flex flex-column">
-                  <big class="text-danger fw-bold mb-3">$0</big>
-                  <big class="text-black">募資開始</big>
-                </div>
-                <div class="position-absolute d-flex flex-column start-50">
-                  <!-- circle -->
-                  <div
-                    class="position-absolute top-50 d-flex justify-content-center align-items-center rounded-circle bg-danger"
-                    style="width: 1rem; height: 1rem; left: -1.5rem; transform: translateY(-50%)"
-                  >
-                    <div
-                      class=" rounded-circle bg-white"
-                      style="width: .55rem; height: .55rem;"
-                    ></div>
-                  </div>
-                  <big class="text-danger fw-bold mb-3">$200,000</big>
-                  <big class="text-black">募資目標</big>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-12 col-md-4 px-4 px-md-3 pb-5">
-          <!-- progress -->
-          <div class="d-none d-xl-block position-relative" style="margin-top: -2.5rem; margin-bottom: 3rem;">
-            <div class="progress" style="margin-top: 4rem;">
-              <div
-                class="progress-bar bg-danger"
-                role="progressbar"
-                style="width: 90%;"
-                aria-valuenow="90"
-                aria-valuemin="0"
-                aria-valuemax="100"
-              ></div>
-              <div class="position-absolute w-100 d-flex" style="margin-top: -1.8rem">
-                <div class="d-flex flex-column">
-                  <big class="text-danger fw-bold mb-3">$0</big>
-                  <big class="text-black">募資開始</big>
-                </div>
-                <div class="position-absolute d-flex flex-column start-50">
-                  <!-- circle -->
-                  <div
-                    class="position-absolute top-50 d-flex justify-content-center align-items-center rounded-circle bg-danger"
-                    style="width: 1rem; height: 1rem; left: -1.5rem; transform: translateY(-50%)"
-                  >
-                    <div
-                      class=" rounded-circle bg-white"
-                      style="width: .55rem; height: .55rem;"
-                    ></div>
-                  </div>
-                  <big class="text-danger fw-bold mb-3">$200,000</big>
-                  <big class="text-black">募資目標</big>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="mb-4">
-            <p class="mb-1 text-muted"><small>目標 NTD$200,000</small></p>
-            <h2 class="fw-bold">$3,052,585</h2>
-          </div>
-          <div class="mb-4">
-            <p class="mb-1 text-muted"><small>贊助人數</small></p>
-            <h2 class="fw-bold">703 人</h2>
-          </div>
-          <div class="mb-4">
-            <p class="mb-1 text-muted"><small>已結束</small></p>
-          </div>
-          <div class="mb-4">
-            <p class="border-start border-5 border-danger ps-3" style="font-size: 0.5rem;">
-              此計劃於 2016/09/02 - 2016/10/08 期間募資，專案募資成功！
-            </p>
-          </div>
-          <div class="d-flex">
-            <img class="rounded-circle" src="https://static.flyingv.asia/static/square/users/5b2f0a6e0f5d3.jpg" alt="" height="48px">
-            <div class="ms-2 d-flex flex-column">
-              <small class="mb-0 text-muted">提案者</small>
-              <a class="text-dark text-hover-danger text-decoration-underline" href="https://www.lomography.tw/" target="_blank" rel="noreferrer noopener">Lomography Taiwan</a>
-            </div>
-          </div>
-        </div>
-      </div>
+    <section class="container">
+
     </section>
 
     <!-- Context menu -->
