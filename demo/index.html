@@ -43,7 +43,7 @@
     @dragstart.prevent
     @vue:mounted="init"
   >
-    <header>
+    <header class="mb-xl-3">
       <nav class="py-1 sticky-top navbar navbar-expand-lg navbar-light bg-white shadow-none border-bottom">
         <div class="position-relative container-xl justify-content-start">
           <!-- toggle menu -->
@@ -71,14 +71,16 @@
                   <!-- lang button -->
                   <button
                     type="button"
-                    class="px-2 py-1 position-realtive bg-white shadow-none border-1 dropdown-toggle"
+                    class="px-2 py-1 position-realtive bg-white shadow-none border-1"
                     style="margin-top: .5rem;"
                     id="dropdownMenuOffset"
                     data-mdb-toggle="dropdown"
                     aria-expanded="false"
                     data-mdb-offset="10,20"
+                    @click="toggleClasses($el.querySelector('i'), 'fa-caret-down fa-caret-up')"
                   >
                     <small class="pe-3">中文</small>
+                    <i class="fas fa-caret-down text-dark"></i>
                   </button>
                   <ul class="dropdown-menu" aria-labelledby="dropdownMenuOffset">
                     <li><a class="dropdown-item" href="#">English</a></li>
@@ -169,7 +171,7 @@
               </div>
             </div>
             <!-- progress -->
-            <div class="px-md-0 my-4 py-4 d-xl-none position-relative container-fluid">
+            <div class="px-md-0 my-5 py-4 d-xl-none position-relative container-fluid">
               <div class="progress">
                 <div
                   class="progress-bar bg-danger"
@@ -204,7 +206,7 @@
           </div>
           <div class="col-12 px-4 col-md-4 px-md-3">
             <!-- progress -->
-            <div class="d-none d-xl-block mb-4 py-4 position-relative">
+            <div class="d-none d-xl-block mb-5 py-4 position-relative">
               <div class="progress">
                 <div
                   class="progress-bar bg-danger"
@@ -248,8 +250,8 @@
               <p class="mb-1 text-muted"><small>已結束</small></p>
             </div>
             <div class="mb-4">
-              <p class="border-start border-5 border-danger ps-3" style="font-size: 0.5rem;">
-                此計劃於 2016/09/02 - 2016/10/08 期間募資，專案募資成功！
+              <p class="border-start border-4 border-danger ps-3" style="font-size: 0.5rem;">
+                已結束此計劃於 2016/09/02 - 2016/10/08 期間募資，專案募資成功！
               </p>
             </div>
             <div class="mb-4 d-flex">
