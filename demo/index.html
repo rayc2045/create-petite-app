@@ -250,8 +250,8 @@
               <p class="mb-1 text-muted"><small>已結束</small></p>
             </div>
             <div class="mb-4">
-              <p class="border-start border-4 border-danger ps-3">
-                <small>已結束此計劃於 2016/09/02 - 2016/10/08 期間募資，專案募資成功！</small>
+              <p class="px-3 text-black lh-sm border-start border-4 border-danger">
+                <small><small>2016/09/02 - 2016/10/08 期間募資，專案募資成功！</small></small>
               </p>
             </div>
             <div class="mb-4 d-flex align-items-center">
@@ -268,21 +268,66 @@
 
     <!-- Project description -->
     <section>
-      <div class="sticky-top bg-light">
-        <div class="container d-none d-md-flex justify-content-between align-items-center">
-          <div class="py-4 fw-bold cursor-pointer border-bottom border-3 border-dark">專案內容</div>
-          <div class="py-4 cursor-pointer">進度</div>
-          <div class="py-4 cursor-pointer">留言</div>
-          <div>
-            <button class="py-2 bg-transparent bg-hover-light border border-dark" style="padding-inline: 5rem;">分享</button>
+      <div class="bg-light sticky-top">
+        <!-- full list -->
+        <div class="container d-none d-md-block">
+          <div class="row">
+            <div class="col-8 d-flex justify-content-around">
+              <div class="py-4 fw-bold cursor-pointer border-bottom border-3 border-dark">專案內容</div>
+              <div class="py-4 cursor-pointer">進度</div>
+              <div class="py-4 cursor-pointer">留言</div>
+            </div>
+            <div class="col-4 d-flex justify-content-center align-items-center">
+              <button
+                class="py-2 w-100 bg-transparent bg-hover-light border border-dark"
+                id="dropdownMenuButton"
+                data-mdb-toggle="dropdown"
+                aria-expanded="false"
+              >分享</button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <li>
+                  <a class="dropdown-item" href="https://zh-tw.facebook.com/lomographytaiwan/" target="_blank" rel="noreferrer noopener"><i class="me-1 fab fa-facebook-square"></i> FB</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" @click="window.open('https://lineit.line.me/share/ui?url=https://www.flyingv.cc/projects/13958', 'Line-share', config='height=500,width=500');"><i class="me-1 fab fa-line"></i> Line</a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
+        <!-- mobile list -->
         <ul class="px-0 py-4 sticky-top d-flex d-md-none justify-content-center align-items-center list-unstyled bg-light">
           <li class="cursor-pointer">專案內容</li>
           <li class="d-none cursor-pointer">進度</li>
           <li class="d-none cursor-pointer">留言</li>
           <i class="ms-2 fas fa-caret-down text-dark"></i>
         </ul>
+      </div>
+      <div class="container">
+        <div class="row">
+          <!-- content -->
+          <div class="col-12 col-md-8 py-5 content">
+            <p class="ps-4 py-3 fw-bold bg-light">
+              <small>【新品上線】 Diana Instant Square</small>
+            </p>
+            <p class="fw-bold">謝謝大家的支持，Lomo'Instant Automat 拍立得相機已成功集資，目前生產進度十分理想，預計於 2016 月 12 月送出所有回饋。目前亦於 Lomography 網上商店開放預購，錯過了 flyingV 專案的朋友可<a class="text-danger" href="https://shop.lomography.com/tw/cameras/lomo-instant-automat" target="_blank" rel="noreferrer noopener">《按此》</a>預購。</p>
+            <p class="fw-bold">假如對本公司之商品有銷售代理之興趣，歡迎以電郵聯繫<a class="text-danger" href="mailto:orders-asia@lomography.com" target="_blank" rel="noreferrer noopener">orders-asia@lomography.com</a>。</p>
+            <hr class="my-5">
+            <p class="fw-bold">Lomo’Instant Automat ── 你每日的即時靈感之源。</p>
+            <img class="my-4 img-fluid" src="https://static.flyingv.asia/static/800x/projects/13958/article/57c6968e9837b.gif">
+            <ul class="fw-bold">
+              <li>最強大的拍立得相機：全新設計的終極拍立得系統，令 Lomo'Instant Automat 的快門速度、光圈設定和閃光燈強度都能夠在任何光線的情況下自動調節，無可挑剔的進行拍攝。</li>
+              <li>最具代表性的創意功能：打破攝影每個界限，為你帶來超現實的藝術創意和簡單快拍！Lomo’Instant Automat 以無限重曝、長時間曝光、外置鏡頭、遙控快門等，進一步提昇攝影創意。</li>
+              <li>由內至外、外至內的精心設計：輕巧、聰明及迷人的 Lomo’Instant Automat 內外兼備，還有 4 款不同的時尚設計，加上豐富的配件套裝，讓你的攝影靈感源源不絕。</li>
+              <li>快速簡單的對焦模式：擁有簡易的三段對焦模式，讓你可以快速對焦並拍下最重要的瞬間！</li>
+              <li>再度光榮回歸集資平台：有著過去 5 個成功並按時完成發貨的集資計劃，我們已準備好接受全新的 flyingV 集資挑戰，同時帶來豐厚優惠及禮遇給每一位支持者。</li>
+            </ul>
+          </div>
+          <!-- product -->
+          <div class="sticky-top col-12 col-md-4">
+  
+          </div>
+        </div>
       </div>
     </section>
 

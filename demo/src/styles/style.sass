@@ -4,3 +4,18 @@
 
 body
   letter-spacing: 0.1rem
+
+.content
+  ul
+    padding-left: 0
+    li
+      margin-bottom: 1rem
+      list-style-type: none
+      display: flex
+    li::before
+      content: '▪'
+      position: relative
+      top: -.85rem
+      margin-right: .5rem
+      font-size: 2rem
+      color: var(--mdb-danger) !important
