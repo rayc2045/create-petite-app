@@ -46,11 +46,6 @@ a.nav-link
 .w-6
   width: 6rem
 
-.text-hover-danger
-  transition: color .2s
-  &:hover
-    color: var(--mdb-danger) !important
-
 .btn-gray, .btn-dimgray
   color: white
   &:hover
@@ -62,6 +57,16 @@ a.nav-link
   background-color: dimgray
 .bg-lightgray-20
   background-color: #F1F1F1 // rgba(lightgray, .2)
+
+.text-hover-danger
+  transition: color .2s
+  &:hover
+    color: var(--mdb-danger) !important
+
+.bg-hover-light
+  transition: background-color .2s
+  &:hover
+    background-color: #EEE !important
 
 .cursor-default
   cursor: default
