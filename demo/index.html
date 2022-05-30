@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="./images/favicon.ico">
-    <title>Lomography LomoInstant Automat</title>
+    <title>Lomography LomoInstant Automat | FlyingV</title>
     <meta name="title" content="Lomography LomoInstant Automat | flyingV">
     <meta name="description" content="以最高階的自動測光系統及創意功能，打造全新拍立得 Lomo'Instant Automat!">
     <meta name="keywords" content="front-end responsive utility-classes grid-layout responsive-design vue-template frontend-template animate-css front-end-template vue3 bootstrap5 petite-vue">
@@ -63,7 +63,7 @@
             <img src="./images/logo.svg" height="64" alt="FlyingV Logo" loading="lazy"
             />
           </a>
-          <!-- search -->
+          <!-- toggle navbar -->
           <div class="pb-3 pb-lg-0 collapse navbar-collapse" id="navbarButtons">
             <ul class="mb-2 mb-lg-0 navbar-nav">
               <li class="nav-item">
@@ -252,7 +252,7 @@
                 此計劃於 2016/09/02 - 2016/10/08 期間募資，專案募資成功！
               </p>
             </div>
-            <div class="d-flex">
+            <div class="mb-4 d-flex">
               <img class="rounded-circle" src="https://static.flyingv.asia/static/square/users/5b2f0a6e0f5d3.jpg" alt="" height="48px">
               <div class="ms-2 d-flex flex-column">
                 <small class="mb-0 text-muted">提案者</small>
@@ -264,8 +264,24 @@
       </section>
     </header>
 
-    <section class="container">
-
+    <!-- Project description -->
+    <section>
+      <div class="sticky-top bg-light">
+        <div class="container d-none d-md-flex justify-content-between align-items-center">
+          <div class="py-4 fw-bold cursor-pointer border-bottom border-3 border-dark">專案內容</div>
+          <div class="py-4 cursor-pointer">進度</div>
+          <div class="py-4 cursor-pointer">留言</div>
+          <div>
+            <button class="py-2 bg-transparent border border-dark" style="padding-inline: 5rem;">分享</button>
+          </div>
+        </div>
+        <ul class="px-0 py-4 sticky-top d-flex d-md-none justify-content-center align-items-center list-unstyled bg-light">
+          <li class="cursor-pointer">專案內容</li>
+          <li class="d-none cursor-pointer">進度</li>
+          <li class="d-none cursor-pointer">留言</li>
+          <i class="ms-2 fas fa-caret-down text-dark"></i>
+        </ul>
+      </div>
     </section>
 
     <!-- Context menu -->
