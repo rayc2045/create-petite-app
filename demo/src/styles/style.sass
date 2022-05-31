@@ -5,7 +5,20 @@
 body
   letter-spacing: 0.1rem
 
-.content
+#content
+  .title
+    margin-left: 1.5rem
+    font-size: 1.5rem
+    font-weight: bold
+    &:before
+      content: ''
+      display: block
+      position: relative
+      left: -1.5rem
+      top: 2rem
+      width: .5rem
+      height: 1.5rem
+      background-color: var(--mdb-danger)
   ul
     padding-left: 0
     li
