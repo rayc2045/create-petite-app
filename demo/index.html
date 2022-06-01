@@ -579,61 +579,82 @@
     </section>
 
     <footer class="py-5 text-white bg-dark">
-      <div class="container">
-        <div class="row">
-          <div class="col-3">
-            <p class="fw-bold">關於</p>
-            <ul class="list-unstyled">
-              <li><a class="text-white" href="https://www.flyingv.cc/about">關於我們</a></li>
-              <li><a class="text-white" href="https://www.flyingv.cc/jobs">人才招募</a></li>
-              <li><a class="text-white" href="https://www.flyingv.cc/branding">商標使用規範</a></li>
-            </ul>
+      <div class="container-md">
+        <div class="mb-5 d-flex justify-content-between">
+          <!-- left -->
+          <div :class="`${windowWidth < 768 ? 'row-col' : 'row gap-5'}`">
+            <div class="col mb-5 mb-lg-0">
+              <p class="mb-4 mb-md-5 fw-bold">關於</p>
+              <small>
+                <ul class="list-unstyled">
+                  <li class="my-3"><a class="text-white text-hover-danger text-decoration-none" href="https://www.flyingv.cc/about">關於我們</a></li>
+                  <li class="my-3"><a class="text-white text-hover-danger text-decoration-none" href="https://www.flyingv.cc/jobs">人才招募</a></li>
+                  <li class="my-3"><a class="text-white text-hover-danger text-decoration-none" href="https://www.flyingv.cc/branding">商標使用規範</a></li>
+                </ul>
+              </small>
+            </div>
+            <div class="col mb-5 mb-lg-0">
+              <p class="mb-4 mb-md-5 fw-bold">條款</p>
+              <small>
+                <ul class="list-unstyled">
+                  <li class="my-3"><a class="text-white text-hover-danger text-decoration-none" href="https://www.flyingv.cc/policy">網站使用條款</a></li>
+                  <li class="my-3"><a class="text-white text-hover-danger text-decoration-none" href="https://www.flyingv.cc/contract">提案者合約</a></li>
+                </ul>
+              </small>
+            </div>
+            <div class="col mb-5 mb-lg-0">
+              <p class="mb-4 mb-md-5 fw-bold">協助</p>
+              <small>
+                <ul class="list-unstyled">
+                  <li class="my-3"><a class="text-white text-hover-danger text-decoration-none" href="https://www.flyingv.cc/faq">常見問題</a></li>
+                  <li class="my-3"><a class="text-white text-hover-danger text-decoration-none" href="https://www.flyingv.cc/guide">使用手冊</a></li>
+                  <li class="my-3"><a class="text-white text-hover-danger text-decoration-none" href="https://www.flyingv.cc/viki">提案百科</a></li>
+                </ul>
+              </small>
+            </div>
+            <div class="col mb-5 mb-lg-0">
+              <p class="mb-4 mb-md-5 fw-bold">更多</p>
+              <small>
+                <ul class="list-unstyled">
+                  <li class="my-3"><a class="text-white text-hover-danger text-decoration-none" href="https://rolla.flyingv.cc">Rolla</a></li>
+                  <li class="my-3">
+                    <a
+                      class="text-white text-hover-danger text-decoration-none"
+                      style="transition: fill .2s;"
+                      @mouseenter="$el.querySelector('svg path').style.fill = 'var(--mdb-danger)'"
+                      @mouseout="$el.querySelector('svg path').style.fill = 'white'"
+                      href="https://shopee.tw/flyingv"
+                      target="_blank" rel="noreferrer noopener"
+                    >VCollection x 
+                      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 32 32" style="margin-bottom: -2px;">
+                        <g fill="none" fill-rule="evenodd">
+                          <path fill="#FFF" d="M18.733 20.883c-.065.234-.168.468-.31.696-.032.05-.054.087-.07.115-.506.745-1.283 1.114-2.23 1.12-.886 0-1.919-.327-3.006-.99-.136-.076-.278-.163-.424-.266-.19-.13-.24-.386-.11-.577.131-.19.387-.239.577-.108.12.081.245.163.38.244.958.582 1.839.87 2.572.87.664 0 1.202-.25 1.545-.755.021-.039.043-.06.048-.077.098-.158.169-.326.218-.489.098-.337.081-.685-.054-1-.147-.332-.43-.653-.87-.92-.294-.179-.658-.337-1.099-.456-1.12-.315-1.946-.761-2.392-1.36-.49-.657-.527-1.45-.005-2.413.348-.636 1.06-1.033 1.963-1.104.777-.06 1.712.125 2.664.609.206.103.288.353.18.56-.11.207-.354.288-.56.18-.811-.414-1.583-.571-2.224-.523-.615.05-1.082.288-1.29.67-.347.635-.342 1.135-.06 1.516.327.44 1.007.783 1.953 1.05.51.146.946.331 1.305.549.593.359.99.81 1.202 1.3.217.505.244 1.038.097 1.56M13.59 7.904c.555-.957 1.288-1.55 2.077-1.55.783 0 1.522.593 2.066 1.545.473.816.805 1.881.924 3.083h-5.991c.125-1.197.45-2.267.924-3.078m10.189 3.078H19.69c-.125-1.387-.51-2.637-1.065-3.594-.74-1.267-1.778-2.056-2.958-2.056-1.18 0-2.224.783-2.958 2.056-.554.962-.94 2.207-1.066 3.594H7.55c-.484 0-.913.402-.88.886l.826 11.45c.087 1.24.859 2.257 2.316 2.257h11.712c1.31 0 2.212-.821 2.315-2.257l.821-11.456c.039-.484-.396-.88-.88-.88"></path>
+                        </g>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </small>
+            </div>
           </div>
-          <div class="col-3">
-            <p class="fw-bold">條款</p>
-            <ul class="list-unstyled">
-              <li><a class="text-white" href="https://www.flyingv.cc/policy">網站使用條款</a></li>
-              <li><a class="text-white" href="https://www.flyingv.cc/contract">提案者合約</a></li>
-            </ul>
-          </div>
-          <div class="col-3">
-            <p class="fw-bold">協助</p>
-            <ul class="list-unstyled">
-              <li><a class="text-white" href="https://www.flyingv.cc/faq">常見問題</a></li>
-              <li><a class="text-white" href="https://www.flyingv.cc/guide">使用手冊</a></li>
-              <li><a class="text-white" href="https://www.flyingv.cc/viki">提案百科</a></li>
-            </ul>
-          </div>
-          <div class="col-3">
-            <p class="fw-bold">更多</p>
-            <ul class="list-unstyled">
-              <li><a class="text-white" href="https://rolla.flyingv.cc">Rolla</a></li>
-              <li>
-                <a class="text-white" href="https://shopee.tw/flyingv" target="_blank" rel="noreferrer noopener">VCollection x&nbsp;&nbsp;<span style="margin-left: -6px; margin-bottom: -2px;">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 32 32" style="margin-bottom: -2px;">
-                    <g fill="none" fill-rule="evenodd">
-                      <path fill="#FFF" d="M18.733 20.883c-.065.234-.168.468-.31.696-.032.05-.054.087-.07.115-.506.745-1.283 1.114-2.23 1.12-.886 0-1.919-.327-3.006-.99-.136-.076-.278-.163-.424-.266-.19-.13-.24-.386-.11-.577.131-.19.387-.239.577-.108.12.081.245.163.38.244.958.582 1.839.87 2.572.87.664 0 1.202-.25 1.545-.755.021-.039.043-.06.048-.077.098-.158.169-.326.218-.489.098-.337.081-.685-.054-1-.147-.332-.43-.653-.87-.92-.294-.179-.658-.337-1.099-.456-1.12-.315-1.946-.761-2.392-1.36-.49-.657-.527-1.45-.005-2.413.348-.636 1.06-1.033 1.963-1.104.777-.06 1.712.125 2.664.609.206.103.288.353.18.56-.11.207-.354.288-.56.18-.811-.414-1.583-.571-2.224-.523-.615.05-1.082.288-1.29.67-.347.635-.342 1.135-.06 1.516.327.44 1.007.783 1.953 1.05.51.146.946.331 1.305.549.593.359.99.81 1.202 1.3.217.505.244 1.038.097 1.56M13.59 7.904c.555-.957 1.288-1.55 2.077-1.55.783 0 1.522.593 2.066 1.545.473.816.805 1.881.924 3.083h-5.991c.125-1.197.45-2.267.924-3.078m10.189 3.078H19.69c-.125-1.387-.51-2.637-1.065-3.594-.74-1.267-1.778-2.056-2.958-2.056-1.18 0-2.224.783-2.958 2.056-.554.962-.94 2.207-1.066 3.594H7.55c-.484 0-.913.402-.88.886l.826 11.45c.087 1.24.859 2.257 2.316 2.257h11.712c1.31 0 2.212-.821 2.315-2.257l.821-11.456c.039-.484-.396-.88-.88-.88"></path>
-                    </g>
-                  </svg></span>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-12">
-            <a class="text-white" href="https://www.facebook.com/FlyingV.cc" target="_blank" rel="noreferrer noopener">
+          <!-- right -->
+          <h2 class="text-end">
+            <a class="mx-2 mb-3 mb-lg-0 d-block d-md-inline-block text-white text-hover-danger text-decoration-none" href="https://www.facebook.com/FlyingV.cc" target="_blank" rel="noreferrer noopener">
               <i class="fab fa-facebook-square"></i>
             </a>
-            <a class="text-white" href="https://www.instagram.com/flyingv.cc" target="_blank" rel="noreferrer noopener">
+            <a class="mx-2 d-block d-md-inline-block text-white text-hover-danger text-decoration-none" href="https://www.instagram.com/flyingv.cc" target="_blank" rel="noreferrer noopener">
               <i class="fab fa-instagram"></i>
             </a>
-          </div>
+          </h2>
         </div>
-        <div class="row">
-          <span class=""><img src="./images/logo.svg" style="filter: grayscale(1);"></span>
-          <span class="line"></span>
-          <span>FLYINGV © 2012-{{ new Date().getFullYear() }}. ALL RIGHTS RESERVED.</span>
+        <div class="d-flex justify-content-center justify-md-content-between align-items-center">
+          <span class="d-none d-md-block">
+            <img src="./images/logo.svg" width="72px" style="filter: contrast(0) brightness(2);">
+          </span>
+          <span class="mx-4 d-none d-md-block flex-fill border-bottom"></span>
+          <span :style="`${windowWidth < 768 ? 'font-size: 12px;' : ''}`">
+            <small>FLYINGV © 2012-{{ new Date().getFullYear() }}. ALL RIGHTS RESERVED.</small>
+          </span>
         </div>
       </div>
     </footer>
