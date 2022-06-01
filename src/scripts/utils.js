@@ -20,6 +20,10 @@ export function getParamsByUrl(url = window.location.href) {
   return entries;
 }
 
+export function getWindowWidth() {
+  return window.innerWidth;
+}
+
 export function getScrollProgress() {
   const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
 	const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
@@ -33,6 +37,12 @@ export function getRandomNum(min, max) {
 
 export function copyText(text) {
   navigator.clipboard.writeText(text.trim());
+}
+
+export function thousandFormat(num) {
+  const parts = num.toString().split('.');
+  parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+  return parts.join('.');
 }
 
 export function getRepeatedItem(arr) {
