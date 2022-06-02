@@ -205,7 +205,7 @@
           </div>
           <div class="col-12 px-4 col-md-4 px-md-3">
             <!-- progress -->
-            <div class="d-none d-xl-block mb-5 py-4 position-relative">
+            <div class="d-none d-xl-block mb-4 py-4 position-relative">
               <div class="progress">
                 <div
                   class="progress-bar bg-danger"
@@ -553,7 +553,7 @@
                         <div class="text-muted"><small>贊助人數</small></div>
                         <div class="text-black">{{ reward.sponsors }}人</div>
                       </div>
-                      <div v-if="reward.maximum > 1">
+                      <div v-if="reward.maximum">
                         <div class="text-muted"><small>限量</small></div>
                         <div class="text-black">{{ reward.maximum }}個</div>
                       </div>
