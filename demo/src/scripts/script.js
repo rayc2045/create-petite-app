@@ -2,7 +2,12 @@
 
 import { createApp } from '/src/libraries/petite-vue.es.min.js';
 import { ContextMenu } from '/src/scripts/components.js';
-import { getWindowWidth, toggleClasses, thousandFormat } from '/src/scripts/utils.js';
+import {
+  fetchData,
+  getWindowWidth,
+  toggleClasses,
+  thousandFormat,
+} from '/src/scripts/utils.js';
 
 ((window, document) => {
   ContextMenu.lists = [
@@ -22,9 +27,7 @@ import { getWindowWidth, toggleClasses, thousandFormat } from '/src/scripts/util
     comments: [],
     rewards: [],
     async init() {
-      this.rewards = await fetch('/demo/src/data/rewards.json').then(res =>
-        res.json()
-      );
+      this.rewards = await fetchData('/demo/src/data/rewards.json');
       this.isLoading = false;
     },
     async updateContent(idx) {
@@ -32,17 +35,13 @@ import { getWindowWidth, toggleClasses, thousandFormat } from '/src/scripts/util
       if (idx === 0) return;
       if (idx === 1 && !this.posts.length) {
         this.isLoading = true;
-        this.posts = await fetch('/demo/src/data/posts.json').then(res =>
-          res.json()
-        );
-        return this.isLoading = false;
+        this.posts = await fetchData('/demo/src/data/posts.json');
+        return (this.isLoading = false);
       }
       if (idx === 2 && !this.comments.length) {
         this.isLoading = true;
-        this.posts = await fetch('/demo/src/data/comments.json').then(res =>
-          res.json()
-        );
-        return this.isLoading = false;
+        this.posts = await fetchData('/demo/src/data/comments.json');
+        return (this.isLoading = false);
       }
     },
     toggleClasses,
