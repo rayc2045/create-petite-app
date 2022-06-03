@@ -327,9 +327,9 @@
       <div class="container">
         <div class="row">
           <div id="content" class="col-12 col-md-8">
-            <div class="pt-5 pb-0 pb-md-5 content">
-              <div class="mt-5" :class="{ 'd-none': currentContentIdx !== 0 }">
-                <p class="mb-5 ps-4 py-3 fw-bold bg-light">
+            <div class="pb-0 pb-md-5 content">
+              <div :class="{ 'd-none': currentContentIdx !== 0 }">
+                <p class="my-5 ps-4 py-3 fw-bold bg-light">
                   <small><a class="text-danger" href="https://www.flyingv.cc/projects/13958/posts/13442" target="_blank" rel="noreferrer noopener">【新品上線】 Diana Instant Square</a></small>
                 </p>
                 <p class="fw-bold">謝謝大家的支持，Lomo'Instant Automat 拍立得相機已成功集資，目前生產進度十分理想，預計於 2016 月 12 月送出所有回饋。目前亦於 Lomography 網上商店開放預購，錯過了 flyingV 專案的朋友可<a class="text-danger" href="https://shop.lomography.com/tw/cameras/lomo-instant-automat" target="_blank" rel="noreferrer noopener">《按此》</a>預購。</p>
@@ -536,8 +536,8 @@
                 <h4 class="title">風險與變數</h4>
                 <p>早前我們成功地完成第二個 flyingV 專案。在過去的幾年裡，我們一直努力將 Lomo'Instant Automat 相機這個計劃實現。但是，亦我們清楚知道每個項目總有風險。我們致力為你提供一個完美的產品，盡一切努力滿足你的期望。第一批產品預計將於 2016 年 12 月送出，我們與生產商緊密合作，確保生產順利並準時送出。每當有最新消息，我們必定會第一時間通知你。我們已完全準備好這個令人興奮的挑戰，希望你能加入我們，完成這個驚人的項目！</p>
               </div>
-              <div class="mt-5 d-flex flex-column-reverse" :class="{ 'd-none': currentContentIdx !== 1 }">
-                <div v-for="post in posts" class="mb-5 p-4 bg-light border rounded">
+              <div class="pt-4 d-flex flex-column-reverse" :class="{ 'd-none': currentContentIdx !== 1 }">
+                <div v-for="post in posts" class="my-4 p-4 bg-light border rounded">
                   <p class="d-flex fw-bold">
                     <span>{{ post.title }}</span>
                     <small class="ms-auto">{{ post.time }}</small>
@@ -554,7 +554,7 @@
                   </p>
                 </div>
               </div>
-              <div class="mt-5" :class="{ 'd-none': currentContentIdx !== 2 }">
+              <div class="{ 'd-none': currentContentIdx !== 2 }">
                 <div v-for="comment in comments" class="">
                   
                 </div>
@@ -566,7 +566,7 @@
               <h4 class="d-block d-md-none title">回饋選單</h4>
             </div>
             <ul
-              class="mx-auto mt-md-1 pt-md-5 px-lg-1 px-xl-4 px-xxl-5 list-unstyled"
+              class="mx-auto px-lg-1 px-xl-4 px-xxl-5 list-unstyled"
               :style="`${windowWidth < 768 ? 'max-width: 300px;' : ''}`"
             >
               <li v-for="(reward, idx) in rewards" class="my-4 border">
