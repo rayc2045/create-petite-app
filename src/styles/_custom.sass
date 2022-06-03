@@ -65,9 +65,12 @@ a.nav-link
   background-color: #F1F1F1 // rgba(lightgray, .2)
 
 .text-hover-danger
-  transition: color .2s
+  transition: color .2s, fill .2s
   &:hover
     color: var(--mdb-danger) !important
+    svg path
+      fill: var(--mdb-danger)
+
 
 .bg-hover-light
   transition: background-color .2s
