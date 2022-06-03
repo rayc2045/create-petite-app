@@ -40,7 +40,7 @@ import {
       }
       if (idx === 2 && !this.comments.length) {
         this.isLoading = true;
-        this.posts = await fetchData('/demo/src/data/comments.json');
+        this.comments = await fetchData('/demo/src/data/comments.json');
         return (this.isLoading = false);
       }
     },

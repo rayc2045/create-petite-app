@@ -34,12 +34,11 @@
   </head>
   <body
     v-cloak
-    class="min-vh-100 bg-white cursor-default overflow-x-hidden"
+    class="min-vh-100 bg-white overflow-x-hidden"
     :class="{ 'overflow-hidden': isLoading }"
     style="--animate-duration: 1.2s"
     @click="ContextMenu.isShow = false"
     @contextmenu.prevent="ContextMenu.showMenu($event)"
-    @selectstart.prevent
     @dragstart.prevent
     @vue:mounted="init"
   >
@@ -554,9 +553,39 @@
                   </p>
                 </div>
               </div>
-              <div class="{ 'd-none': currentContentIdx !== 2 }">
-                <div v-for="comment in comments" class="">
-                  
+              <div class="pt-4 d-flex flex-column-reverse" :class="{ 'd-none': currentContentIdx !== 2 }">
+                <div v-for="(comment, idx) in comments" class="py-4 d-flex rounded" :class="{ 'border-bottom': idx !== 0 }">
+                  <figure class="me-4">
+                    <img class="square-4 rounded-circle" :src="comment.userImage ?? './images/nonuser.svg'" alt="">
+                  </figure>
+                  <div class="w-100">
+                    <p class="d-flex">
+                      <strong v-if="!comment.userName">Anonymous</strong>
+                      <a v-if="comment.userName" class="fw-bold text-dark" :href="`https://www.flyingv.cc/users/${comment.userId}`">
+                        {{ comment.userName }}
+                      </a>
+                      <small class="ms-auto text-muted">
+                        <small>
+                          {{ new Date().getFullYear() - comment.time }} 年前
+                        </small>
+                      </small>
+                    </p>
+                    <p>
+                      <small v-for="breakContent in comment.content.split('\n')">
+                        {{ breakContent }}<br>
+                      </small>
+                    </p>
+                    <div v-if="comment.reply" class="p-4 w-100 bg-light">
+                      <p class="fw-bold">
+                        <a class="text-dark" href="https://www.flyingv.cc/users/22298">Lomography Taiwan</a>
+                      </p>
+                      <p>
+                        <small v-for="breakReply in comment.reply.split('\n')" class="text-break">
+                          {{ breakReply }}<br>
+                        </small>
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
