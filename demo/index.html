@@ -74,6 +74,7 @@
                     aria-expanded="false"
                     data-mdb-offset="10,20"
                     @click="toggleClasses($el.querySelector('i'), 'fa-caret-down fa-caret-up')"
+                    @blur="toggleClasses($el.querySelector('i'), 'fa-caret-down fa-caret-up')"
                   >
                     <small class="pe-3">中文</small>
                     <i class="fas fa-caret-down text-dark"></i>
@@ -273,19 +274,18 @@
         <div class="container d-none d-md-block">
           <div class="row">
             <div class="col-8 d-flex justify-content-around">
-              <div v-for="(content, idx) in contents">
-                <div
-                  class="py-4 cursor-pointer"
-                  :class="{ 'fw-bold border-bottom border-dark border-3': idx === currentContentIdx }"
-                  data-content="`${content}`"
-                  @click="updateContent(idx)"
-                >
-                  <a href="#content" class="text-dark text-decoration-none">{{
-                    content === 'project' ? '專案內容'
-                    : content === 'posts' ? '進度'
-                    : '留言'
-                  }}</a>
-                </div>
+              <div
+                v-for="(content, idx) in contents"
+                class="py-4 cursor-pointer"
+                :class="{ 'fw-bold border-bottom border-dark border-3': idx === currentContentIdx }"
+                data-content="`${content}`"
+                @click="updateContent(idx)"
+              >
+                <a href="#content" class="text-dark text-decoration-none">{{
+                  content === 'project' ? '專案內容'
+                  : content === 'posts' ? '進度'
+                  : '留言'
+                }}</a>
               </div>
             </div>
             <div class="col-4 px-md-0 px-lg-2 d-flex justify-content-center align-items-center">
@@ -309,18 +309,32 @@
           </div>
         </div>
         <!-- mobile list -->
-        <ul class="px-0 py-4 d-flex d-md-none justify-content-center align-items-center list-unstyled bg-light">
-          <li class="cursor-pointer">
-            <a href="#content" class="text-dark text-decoration-none">專案內容</a>
-          </li>
-          <li class="d-none cursor-pointer">
-            <a href="#content" class="text-dark text-decoration-none">進度</a>
-          </li>
-          <li class="d-none cursor-pointer">
-            <a href="#content" class="text-dark text-decoration-none">留言</a>
-          </li>
-          <i class="ms-2 fas fa-caret-down text-dark"></i>
-        </ul>
+        <div class="d-md-none dropdown">
+          <button
+            class="py-4 d-block mx-auto bg-transparent border-0"
+            type="button"
+            id="contentDropdownMenu"
+            data-mdb-toggle="dropdown"
+            aria-expanded="false"
+            @click="toggleClasses($el.querySelector('i'), 'fa-caret-down fa-caret-up')"
+            @blur="toggleClasses($el.querySelector('i'), 'fa-caret-down fa-caret-up')"
+          >
+            內容選單<i class="ms-2 fas fa-caret-down text-dark"></i>
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="contentDropdownMenu">
+            <li
+              v-for="(content, idx) in contents"
+              data-content="`${content}`"
+              @click="updateContent(idx)"
+            >
+              <a href="#content" class="d-block dropdown-item text-dark">{{
+                content === 'project' ? '專案內容'
+                : content === 'posts' ? '進度'
+                : '留言'
+              }}</a>
+            </li>
+          </ul>
+        </div>
       </div>
       <div class="container">
         <div class="row cursor-auto">
@@ -490,15 +504,15 @@
                   <img class="my-4 w-100" src="./images/project_13958/content/18.avif" alt="" loading="lazy">
                   <figcaption class="figure-caption text-center">Lomo'Instant Automat: 的樣板正在製作中</figcaption>
                 </figure>
-                <strong class="mt-2 d-block">
+                <div class="mt-2 fw-bold">
                   <p><i class="far fa-check-circle"></i> 2016 年 6 月：初步構思</p>
                   <p><i class="far fa-check-circle"></i> 2016 年 7 月：組裝配件及預備加工</p>
                   <p><i class="far fa-check-circle"></i> 2016 年 8 月：完成樣板機，落實相機的外型設計及款式</p>
                   <p><i class="far fa-check-circle"></i> 2016 年 9 月：包裝設計及測試樣板機</p>
                   <p><i class="far fa-check-circle"></i> 2016 年 10 月：最後測試樣板及開始生產</p>
-                  <p class="text-muted"><i class="far fa-circle"></i> 2016 年 11 月：生產 FlyingV 募資計畫訂單</p>
-                  <p class="text-muted"><i class="far fa-circle"></i> 2016 年 12 月：Lomo'Instant Automat 準備好發貨</p>
-                </strong>
+                  <p><i class="far fa-check-circle"></i> 2016 年 11 月：生產 FlyingV 募資計畫訂單</p>
+                  <p><i class="far fa-check-circle"></i> 2016 年 12 月：Lomo'Instant Automat 準備好發貨</p>
+                </div>
   
                 <h4 class="title">感謝支持 LOMO'INSTANT 家族</h4>
                 <img class="my-4 w-100" src="./images/project_13958/content/19.avif" alt="" loading="lazy">
@@ -536,9 +550,11 @@
               </div>
               <div class="pt-4 d-flex flex-column-reverse" :class="{ 'd-none': currentContentIdx !== 1 }">
                 <div v-for="post in posts" class="my-4 p-4 bg-light border rounded">
-                  <p class="d-flex fw-bold">
+                  <p class="d-flex align-items-center fw-bold">
                     <span>{{ post.title }}</span>
-                    <small class="ms-auto">{{ post.time }}</small>
+                    <small class="ms-auto text-muted">
+                      <Small>{{ post.time }}</Small>
+                    </small>
                   </p>
                   <p>
                     <small v-if="post.content" >
@@ -603,8 +619,8 @@
                   <p>
                     <small>{{ reward.title }}</small>
                   </p>
-                  <p>
-                    <div class="lead fw-bold">${{ thousandFormat(reward.price) }}</div>
+                  <p class="lead fw-bold">
+                    ${{ thousandFormat(reward.price) }}
                   </p>
                   <hr>
                   <small class="d-block">
