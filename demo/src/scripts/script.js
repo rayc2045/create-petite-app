@@ -8,7 +8,15 @@ import {
   thousandFormat,
 } from '/src/scripts/utils.js';
 
-((window, document) => {
+((
+  window,
+  document,
+  createApp,
+  fetchData,
+  getWindowWidth,
+  toggleClasses,
+  thousandFormat
+) => {
   const App = {
     windowWidth: getWindowWidth(),
     isPrefersReducedMotion: window.matchMedia(
@@ -47,4 +55,12 @@ import {
 
   createApp(App).mount();
   window.onresize = () => App.updateWindowWidth();
-})(window, document);
+})(
+  window,
+  document,
+  createApp,
+  fetchData,
+  getWindowWidth,
+  toggleClasses,
+  thousandFormat
+);
