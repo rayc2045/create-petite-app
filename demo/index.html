@@ -571,7 +571,12 @@
               <div class="pt-4 d-flex flex-column-reverse" :class="{ 'd-none': currentContentIdx !== 2 }">
                 <div v-for="(comment, idx) in comments" class="py-4 d-flex rounded" :class="{ 'border-bottom': idx !== 0 }">
                   <figure class="me-4">
-                    <img class="square-4 rounded-circle" :src="comment.userImage ?? './images/nonuser.svg'" alt="">
+                    <img
+                      class="square-4 rounded-circle"
+                      onerror="this.src = './images/nonuser.svg'"
+                      :src="comment.userImage ?? './images/nonuser.svg'"
+                      alt=""
+                    >
                   </figure>
                   <div class="w-100">
                     <p class="d-flex">
