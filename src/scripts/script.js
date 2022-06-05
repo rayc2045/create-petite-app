@@ -1,6 +1,7 @@
 'use strict';
 
 import { createApp } from '/src/libraries/petite-vue.es.min.js';
+import { getWindowWidth } from '/src/scripts/utils.js';
 import { ContextMenu } from '/src/scripts/components.js';
 
 ((window, document) => {
@@ -23,6 +24,7 @@ import { ContextMenu } from '/src/scripts/components.js';
 
   const App = {
     ContextMenu,
+    windowWidth: getWindowWidth(),
     isPrefersReducedMotion: window.matchMedia(
       '(prefers-reduced-motion: reduce)'
     ).matches,
@@ -30,9 +32,16 @@ import { ContextMenu } from '/src/scripts/components.js';
     async init() {
       this.isLoading = false;
     },
+    updateWindowWidth() {
+      this.windowWidth = getWindowWidth();
+    },
   };
 
   createApp(App).mount();
-  window.onresize = () => (ContextMenu.isShow = false);
   window.onscroll = () => (ContextMenu.isShow = false);
+
+  window.onresize = () => {
+    App.updateWindowWidth();
+    ContextMenu.isShow = false;
+  };
 })(window, document);

@@ -2,7 +2,12 @@
 
 import { createApp } from '/src/libraries/petite-vue.es.min.js';
 import { ContextMenu } from '/src/scripts/components.js';
-import { fetchData, copyText, toggleClasses, getScrollProgress } from '/src/scripts/utils.js';
+import {
+  fetchData,
+  copyText,
+  toggleClasses,
+  getScrollProgress,
+} from '/src/scripts/utils.js';
 
 ContextMenu.lists = [
   { content: 'Features', link: '#features' },
@@ -12,7 +17,7 @@ ContextMenu.lists = [
   { content: 'Petite-Vue syntax', link: '#petite-vue-template-syntax' },
   { content: 'MDBootstrap examples', link: '#mdbootstrap-examples' },
   { content: 'Animate.css animations', link: '#animate-css-animations' },
-]
+];
 
 const petiteVueExample = `
   <script type="module">
@@ -66,7 +71,10 @@ const App = {
     return str.replace(/style="[^"]*"/g, '').replace(/" >/g, '">');
   },
   toggleAnimation(el, animation) {
-    toggleClasses(el, `animate__animated animate__${animation} animate__infinite`);
+    toggleClasses(
+      el,
+      `animate__animated animate__${animation} animate__infinite`
+    );
   },
 };
 
