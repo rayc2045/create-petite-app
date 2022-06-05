@@ -276,16 +276,14 @@
             <div class="col-8 d-flex justify-content-around">
               <div
                 v-for="(content, idx) in contents"
-                class="py-4 cursor-pointer"
-                :class="{ 'fw-bold border-bottom border-dark border-3': idx === currentContentIdx }"
                 data-content="`${content}`"
                 @click="updateContent(idx)"
               >
-                <a href="#content" class="text-dark text-decoration-none">{{
-                  content === 'project' ? '專案內容'
-                  : content === 'posts' ? '進度'
-                  : '留言'
-                }}</a>
+                <a
+                  href="#content"
+                  class="py-4 d-block text-dark text-decoration-none"
+                  :class="{ 'fw-bold border-bottom border-dark border-3': idx === currentContentIdx }"
+                >{{ content === 'project' ? '專案內容' : content === 'posts' ? '進度' : '留言' }}</a>
               </div>
             </div>
             <div class="col-4 px-md-0 px-lg-2 d-flex justify-content-center align-items-center">
@@ -327,11 +325,7 @@
               data-content="`${content}`"
               @click="updateContent(idx)"
             >
-              <a href="#content" class="d-block dropdown-item text-dark">{{
-                content === 'project' ? '專案內容'
-                : content === 'posts' ? '進度'
-                : '留言'
-              }}</a>
+              <a href="#content" class="d-block dropdown-item text-dark">{{ content === 'project' ? '專案內容' : content === 'posts' ? '進度' : '留言' }}</a>
             </li>
           </ul>
         </div>
@@ -576,7 +570,7 @@
                       onerror="this.src = 'https://raw.githubusercontent.com/rayc2045/create-petite-app/main/demo/images/nonuser.svg'"
                       :src="comment.userImage ?? 'https://raw.githubusercontent.com/rayc2045/create-petite-app/main/demo/images/nonuser.svg'"
                       alt=""
-                      loading="lazy">
+                      loading="lazy"
                     >
                   </figure>
                   <div class="w-100">
