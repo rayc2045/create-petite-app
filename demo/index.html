@@ -34,7 +34,7 @@
   </head>
   <body
     v-cloak
-    class="min-vh-100 bg-white overflow-x-hidden"
+    class="min-vh-100 overflow-x-hidden"
     :class="{ 'overflow-hidden': isLoading }"
     style="--animate-duration: 1.2s"
     @dragstart.prevent
@@ -142,7 +142,7 @@
         </div>
       </nav>
       <!-- Project intro -->
-      <section class="mt-5 container-fluid container-lg cursor-auto">
+      <section class="mt-5 container-fluid container-lg">
         <div class="py-2 badge badge-light rounded-0">科技設計</div>
         <h4 class="my-2 fw-bold">Lomography LomoInstant Automat</h4>
         <div class="mt-4 row">
@@ -331,7 +331,7 @@
         </div>
       </div>
       <div class="container">
-        <div class="row cursor-auto">
+        <div class="row">
           <div id="content" class="col-12 col-md-8">
             <div class="pb-0 pb-md-5 content">
               <div :class="{ 'd-none': currentContentIdx !== 0 }">
