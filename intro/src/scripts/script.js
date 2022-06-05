@@ -60,7 +60,7 @@ const App = {
   petiteVueExample,
   animations: [],
   async init() {
-    this.animations = await fetchData('./src/data/animations.json');
+    this.animations = await fetchData('https://raw.githubusercontent.com/rayc2045/create-petite-app/main/intro/src/data/animations.json');
     this.isLoading = false;
   },
   updateScrollProgress() {

@@ -29,7 +29,7 @@ import {
     comments: [],
     rewards: [],
     async init() {
-      this.rewards = await fetchData('/demo/src/data/rewards.json');
+      this.rewards = await fetchData('https://raw.githubusercontent.com/rayc2045/create-petite-app/main/demo/src/data/rewards.json');
       this.isLoading = false;
     },
     async updateContent(idx) {
@@ -37,12 +37,12 @@ import {
       if (idx === 0) return;
       if (idx === 1 && !this.posts.length) {
         this.isLoading = true;
-        this.posts = await fetchData('/demo/src/data/posts.json');
+        this.posts = await fetchData('https://raw.githubusercontent.com/rayc2045/create-petite-app/main/demo/src/data/posts.json');
         return (this.isLoading = false);
       }
       if (idx === 2 && !this.comments.length) {
         this.isLoading = true;
-        this.comments = await fetchData('/demo/src/data/comments.json');
+        this.comments = await fetchData('https://raw.githubusercontent.com/rayc2045/create-petite-app/main/demo/src/data/comments.json');
         return (this.isLoading = false);
       }
     },
