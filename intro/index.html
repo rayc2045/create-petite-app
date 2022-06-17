@@ -35,7 +35,7 @@
   </head>
   <body
     v-cloak
-    class="min-vh-100 bg-light cursor-default"
+    class="px-2 px-sm-0 min-vh-100 bg-light cursor-default"
     :class="{ 'overflow-hidden': isLoading }"
     style="--animate-duration: 1.2s"
     @click="ContextMenu.isShow = false"
@@ -44,30 +44,29 @@
     @dragstart.prevent
     @vue:mounted="init"
   >
-    <!-- Content -->
-    <div class="px-2 px-sm-0 container">
-      <section class="mb-4">
-        <div class="mb-2 cover-animation overflow-hidden">
-          <lottie-player class="animate__animated animate__fadeInUp" style="--animate-duration: 1.8s" src="https://raw.githubusercontent.com/rayc2045/create-petite-app/main/intro/images/programming.json" background="transparent" speed="1" style="width: 100%;" loop autoplay></lottie-player>
-        </div>
-        <h1 class="mb-3 fw-bold">🤘 Create Petite App</h1>
-        <p class="mb-2">
-          <code class="p-1 text-dark bg-lightgray-20 rounded">create-petite-app</code> is a frontend template that includes libraries MDBootstrap, Animate.css, and Petite-Vue.
-        </p>
-        <p class="mb-2">The use of CSS utility classes and the reactivity model provided by Petite-Vue helps build projects very fast!</p>
-        <p>Demo website: <a href="https://flyingv-demo.netlify.app/" target="_blank" rel="noreferrer noopener">Lomography LomoInstant Automat | flyingV</a></p>
-      </section>
-  
-      <section id="features">
+    <header class="mb-4 container">
+      <div class="mb-2 cover-animation overflow-hidden">
+        <lottie-player class="animate__animated animate__fadeInUp" style="--animate-duration: 1.8s" src="https://raw.githubusercontent.com/rayc2045/create-petite-app/main/intro/images/programming.json" background="transparent" speed="1" style="width: 100%;" loop autoplay></lottie-player>
+      </div>
+      <h1 class="mb-3 fw-bold">🤘 Create Petite App</h1>
+      <p class="mb-2">
+        <code class="p-1 text-dark bg-lightgray-20 rounded">create-petite-app</code> is a frontend template that includes libraries MDBootstrap, Animate.css, and Petite-Vue.
+      </p>
+      <p class="mb-2">The use of CSS utility classes and the reactivity model provided by Petite-Vue helps build projects very fast!</p>
+      <p>Demo website: <a href="https://flyingv-demo.netlify.app/" target="_blank" rel="noreferrer noopener">Lomography LomoInstant Automat | flyingV</a></p>
+    </header>
+
+    <section class="container">
+      <div id="features">
         <h2 class="fw-bold">Features</h2>
         <ul>
           <li class="mb-1">Vue template syntax and reactivity model</li>
           <li class="mb-1">Ready-to-use CSS Utility classes and animations</li>
           <li class="mb-1">Dynamic import of JavaScript ES6 <a href="https://github.com/mdn/js-examples/tree/master/module-examples" target="_blank" rel="noreferrer noopener">modules</a></li>
         </ul>
-      </section>
+      </div>
   
-      <section id="pre-packed">
+      <div id="pre-packed">
         <h2 class="fw-bold">Pre-packed</h2>
         <ul>
           <li class="mb-1"><a href="https://fonts.google.com/noto/specimen/Noto+Sans" target="_blank" rel="noreferrer noopener">Noto Sans</a> - the modern font suitable for most websites</li>
@@ -76,9 +75,9 @@
           <li class="mb-1"><a href="https://animate.style/" target="_blank" rel="noreferrer noopener">Animate.css</a> (v4.1.1) - ready-to-use animation library, great for emphasis, home pages, sliders, and attention-guiding hints</li>
           <li class="mb-1"><a href="https://github.com/vuejs/petite-vue" target="_blank" rel="noreferrer noopener">Petite-Vue</a> (v0.4.1) - progressive JavaScript library driven by <code class="p-1 text-dark bg-lightgray-20 rounded">@vue/reactivity</code> for building web user interfaces</li>
         </ul>
-      </section>
+      </div>
   
-      <section id="ways-of-quick-start">
+      <div id="ways-of-quick-start">
         <h2 class="fw-bold">Ways of quick start</h2>
         <ul>
           <li class="mb-1"><a href="https://github.com/rayc2045/create-petite-app/generate" target="_blank" rel="noreferrer noopener">Create a new repo from this template on GitHub</a></li>
@@ -97,9 +96,9 @@
         >
           <code class="text-dark">cd desktop; npx degit rayc2045/create-petite-app new-petite-app</code>
         </p>
-      </section>
+      </div>
   
-      <section id="usage">
+      <div id="usage">
         <h2 class="fw-bold">Usage</h2>
         <ul>
           <li class="mb-1">Use <a href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer" target="_blank" rel="noreferrer noopener">Live Server</a> to preview the project</li>
@@ -107,9 +106,9 @@
           <li class="mb-1">Use <a href="https://marketplace.visualstudio.com/items?itemName=josee9988.minifyall" target="_blank" rel="noreferrer noopener">MinifyAll</a> to compress JavaScript code</li>
           <li class="mb-1">Deploy production web applications on <a href="https://app.netlify.com/start" target="_blank" rel="noreferrer noopener">Netlify</a></li>
         </ul>
-      </section>
+      </div>
   
-      <section id="petite-vue-template-syntax">
+      <div id="petite-vue-template-syntax">
         <h2 class="mb-2 fw-bold">Petite-Vue template syntax</h2>
         <p>See more usages from petite-vue README.md on <a href="https://github.com/vuejs/petite-vue" target="_blank" rel="noreferrer noopener">GitHub</a>.</p>
         <div
@@ -152,9 +151,9 @@
           <span class="pl-kos">&lt;</span><span style="color: forestgreen;">button</span> <span style="color: mediumblue;">@click</span>="<span style="color: royalblue;">inc</span>"<span class="pl-kos">&gt;</span>increment<span class="pl-kos">&lt;/</span><span style="color: forestgreen;">button</span><span class="pl-kos">&gt;</span>
         <span class="pl-kos">&lt;/</span><span style="color: forestgreen;">div</span><span class="pl-kos">&gt;</span>
         </pre></div>
-      </section>
+      </div>
   
-      <section id="mdbootstrap-examples">
+      <div id="mdbootstrap-examples">
         <h2 class="mb-2 fw-bold">MDBootstrap examples</h2>
         <p>See more examples ranging from using parts of the framework to custom components and layouts <a href="https://mdbootstrap.com/docs/standard/" target="_blank" rel="noreferrer noopener">here</a>.</p>
         <!-- Grid -->
@@ -283,9 +282,9 @@
             </div>
           </div>
         </div>
-      </section>
+      </div>
   
-      <section id="animate-css-animations">
+      <div id="animate-css-animations">
         <h2 class="mb-2 fw-bold">Animate.css animations</h2>
         <p>
           <span v-if="isPrefersReducedMotion">🙁 Oops! It seems that you </span>
@@ -328,8 +327,8 @@
             </ul>
           </li>
         </ul>
-      </section>
-    </div>
+      </div>
+    </section>
 
     <footer class="mb-4 text-center">
       <small>
