@@ -1,0 +1,30 @@
+// ::-webkit-scrollbar
+//   width: 0
+
+::selection
+  background-color: #E6E6E6 // rgba(lightgray, .5)
+  
+html
+  font-size: 16px
+  scroll-behavior: smooth
+  scroll-padding-top: 1rem
+  // scrollbar-width: none
+
+body
+  font-family: "Noto Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"
+
+[v-cloak]
+  opacity: 0
+
+@media (hover: hover)
+  a:hover
+    color: var(--mdb-primary)
+    @media (min-width: 992px)
+      text-decoration: underline
+
+  button a,
+  .dropdown-menu a,
+  a.btn,
+  a.nav-link
+    &:hover
+      text-decoration: none

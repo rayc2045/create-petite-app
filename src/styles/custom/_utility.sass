@@ -1,0 +1,73 @@
+.hero
+  height: 50vh
+  background-position: center center
+  background-size: cover
+  
+.absolute-center
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+
+.square-1
+  width: 1rem
+  height: 1rem
+.square-2
+  width: 2rem
+  height: 2rem
+.square-3
+  width: 3rem
+  height: 3rem
+.square-4
+  width: 4rem
+  height: 4rem
+.square-5
+  width: 5rem
+  height: 5rem
+.square-6
+  width: 6rem
+  height: 6rem
+
+.btn-gray, .btn-dimgray
+  color: white
+  &:hover
+    color: white
+
+.btn-gray, .bg-gray
+  background-color: gray
+.btn-dimgray, .bg-dimgray
+  background-color: dimgray
+.bg-lightgray-20
+  background-color: #F1F1F1 // rgba(lightgray, .2)
+.bg-dot-grid
+  background-image: radial-gradient(silver 1px, transparent 0)
+  background-size: 22.5px 22.5px
+.bg-whirlpool
+  background-image: url('/images/background/whirlpool.webp')
+
+.cursor-default
+  cursor: default
+.cursor-pointer
+  cursor: pointer
+.cursor-auto
+  cursor: auto
+.disabled
+  cursor: no-drop
+  *
+    pointer-events: none
+
+.overflow-x-hidden
+  overflow-x: hidden
+
+@media (hover: hover)
+  .text-hover-danger
+    transition: color .2s, fill .2s
+    &:hover
+      color: var(--mdb-danger) !important
+      svg path
+        fill: var(--mdb-danger)
+
+  .bg-hover-light
+    transition: background-color .2s
+    &:hover
+      background-color: #EEE !important

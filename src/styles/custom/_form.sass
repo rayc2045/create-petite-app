@@ -1,0 +1,31 @@
+.form-outline.form-muted
+  .form-control
+    &:focus ~ .form-label
+      color: var(--mdb-muted)
+    &:focus ~ .form-notch .form-notch-middle
+      border-color: var(--mdb-muted)
+      box-shadow: 0 1px 0 0 var(--mdb-muted)
+      border-top: 1px solid transparent
+    &:focus ~ .form-notch .form-notch-leading
+      border-color: var(--mdb-muted)
+      box-shadow: -1px 0 0 0 var(--mdb-muted), 0 1px 0 0 var(--mdb-muted), 0 -1px 0 0 var(--mdb-muted)
+    &:focus ~ .form-notch .form-notch-trailing
+      border-color: var(--mdb-muted)
+      box-shadow: 1px 0 0 0 var(--mdb-muted), 0 -1px 0 0 var(--mdb-muted), 0 1px 0 0 var(--mdb-muted)
+    &::placeholder
+      color: var(--mdb-muted)
+
+.form-check-input
+  &.form-check-danger
+    &[type='checkbox']
+      border-color: darkgray
+      &:checked
+        background-color: var(--mdb-danger)
+        border-color: var(--mdb-danger)
+        &:focus
+          background-color: var(--mdb-danger)
+          border-color: var(--mdb-danger)
+          &:before
+            box-shadow: 0 0 0 13px rgba(gray, 60%)
+      &:indeterminate
+        border-color: transparent
